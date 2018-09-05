@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.program.AresVikings" name="[COLOR gold]Ares[/COLOR] [COLOR orange]Vikings Tools Wizard[/COLOR]" version="4.70" provider-name="VikingsTools">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="pt_br"> Ares Wizard Vikings Tools</summary>
+    <description lang="pt_br">Bem-vindo e obrigado por fazer o download do nosso assistente.
+[CR]O Assistente Vikings Wizard permite que vocÃª tenha acesso livre a todas as compilaÃ§Ãµes personalizadas para o seu Kodi em seu dispositivo de streaming.
+[CR]Executar manutenÃ§Ã£o, Limpar cache, Limpar pacotes, manter seus dados do Trakt e Real Debrid e muito mais.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.aceboxtv"
        name="AceBoxTV"
        version="3.0"
@@ -73,6 +90,29 @@
 
  </extension>
 
+</addon>
+
+<addon id="plugin.video.jami"
+       name="[COLOR white][B]Jami[/B][/COLOR]"
+       version="7.0"
+       provider-name="frenchdj">
+ <requires>
+	<import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.simplejson" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[ 2018 ]</summary>
+    <description>Videos Infantis em [COLOR lime][PT][/COLOR] e [COLOR yellow][BR][/COLOR].
+Playlists organizadas por categorias, totalmente dedicadas aos mais pequenos, com muitos desenhos animados recentes, classicos e musicais.
+Toda a fonte  vem de utilizadores do Youtube.
+[B][COLOR lime][ Aconselhado Youtube 6.*.* ][/B][/COLOR]</description>
+    <platform>all</platform>
+  </extension>
 </addon>
 
 <addon id="plugin.video.kidzflix"
@@ -195,6 +235,30 @@
 
 </addon>
 
+<addon id="plugin.video.mrpiracy" name="MrPiracy" provider-name="MrPiracy" version="0.8.9">
+ <requires>
+  <import addon="xbmc.python" version="2.14.0"/>
+  <import addon="script.module.t0mm0.common" version="1.0.0"/>
+  <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+ <extension library="addon.py" point="xbmc.python.pluginsource">
+  <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+    <summary lang="en">MrPiracy</summary>
+    <description lang="en">Addon site MrPiracy</description>
+    <description lang="en">Filmes e series no Kodi. </description>
+    <disclaimer lang="en">Como desenvolvedor do addon, nada tenho a haver com site. O site pode ser acedido por um browser. Limito-me a ler o seu conteÃºdo disponibilizado e converter em addon.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+ </extension>
+</addon>
+
 
 <addon id="plugin.video.onfire" name="onfire" version="1.0.0" provider-name="onfire">
 
@@ -262,6 +326,48 @@
     <summary>TOPIPTV BY TEAM J2MF4</summary>
     <description>TEAM J2MF4 IPTV4ALL "WE LEAD THE WAY"
  </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.teamblue"
+       name="[COLOR blue]T[/COLOR]eam[COLOR blue]B[/COLOR]lue Live Events"
+       version="2.4"
+       provider-name="Eduardo Pinto">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="pt">Add-on ao estilo Agenda Desportiva</summary>
+    <description lang="pt">
+O add-on TeamBlue apresenta as seguintes secÃ§Ãµes:
+Agenda desportiva com transmissÃµes em direto de vÃ¡rias modalidades
+Sports Replays (Futebol-Desportos Motorizados-WWE-UFC-NBA)
+Canais World IPTV (Portugal-Alemanha-Espanha-FranÃ§a-ItÃ¡lia-Inglaterra-Brasil-Estados Unidos-Adultos)
+Canais Arenavision (para ver com o Plexus)
+Webcam's
+NOTA: para a correta visualizaÃ§Ã£o de alguns canais Ã© necessÃ¡rio ter instalados:
+f4mtester â€“ f4mproxy - Sports Devil â€“ Plexus
+O criador deste addon nÃ£o possui nem estÃ¡ ligado de nenhuma forma ao conteÃºdo nele disponibilizado.
+Apenas disponibiliza conteÃºdos de terceiros
+	</description>
     <platform>all</platform>
   </extension>
 </addon>
