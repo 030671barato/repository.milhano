@@ -1,28 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="service.subtitles.opensubtitles"
-       name="OpenSubtitles.org"
-       version="5.1.14"
-       provider-name="amet">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.subtitle.module"
-             library="service.py" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">OpenSubtitles</summary>
-    <description lang="en">Search and download subtitles from opensubtitles.org</description>
-    <description lang="zh">从 opensubtitles.org 搜索并下载字幕</description>
-    <disclaimer lang="en"></disclaimer>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum>http://forum.xbmc.org/showthread.php?tid=183114</forum>
-    <website></website>
-    <email></email>
-    <source>https://github.com/amet/service.subtitles.opensubtitles</source>    
-  </extension>
-</addon>
-
 <addon id="demagorgon.repository" name="Demagorgon repository" version="0.0.2" provider-name="Demagorgon">
 	<extension point="xbmc.addon.repository" name="Demagorgon Add-on Repository">
 		<info compressed="false">https://raw.githubusercontent.com/cmvac/demagorgon.repository/master/addons.xml</info>
@@ -1130,6 +1107,31 @@ Apenas disponibiliza conteÃºdos de terceiros
   </extension>
 </addon>
 
+<addon id="script.module.metahandler"
+     name="metahandler"
+     version="3.0.3"
+     provider-name="Eldorado, jsergio">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="script.module.myconnpy" version="1.1.6"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Downloads Artwork for TV shows, Movies and Music videos for addons and stores them in a local SQLITE database</summary>
+    <description lang="en">Queries, stores, and returns metadata for TV shows, Movies and Musicvideos. [CR]Sources:[CR]www.thetvdb.com[CR]www.themoviedb.org[CR]www.imdb.com[CR]www.omdbapi.com[CR]This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
+    <disclaimer lang="en"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
 <addon id="script.module.nanscrapers" name="NaN Scrapers" version="0.5.51" provider-name="Team NaN">
         <requires>
                 <import addon="xbmc.python" version="2.1.0"/>
@@ -1154,6 +1156,56 @@ Apenas disponibiliza conteÃºdos de terceiros
                 <forum>http://www.noobsandnerds.com/support/showthread.php?tid=17212</forum>
                 <website>http://noobsandnerds.com</website>
         </extension>
+</addon>
+
+<addon id="script.module.requests"
+       name="requests"
+       version="2.19.1"
+       provider-name="kennethreitz">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.urllib3" version="1.22"/>
+    <import addon="script.module.chardet" version="3.0.4"/>
+    <import addon="script.module.idna" version="2.6"/>
+    <import addon="script.module.certifi" version="2017.07.27.1"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Python HTTP for Humans</summary>
+    <description lang="en_GB">Packed for KODI from https://github.com/requests/requests</description>
+    <platform>all</platform>
+    <language></language>
+    <license>Apache2</license>
+    <forum></forum>
+    <website>http://python-requests.org</website>
+    <source>https://github.com/beenje/script.module.requests</source>
+    <email>beenje AT gmail.com</email>
+  </extension>
+</addon>
+
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.07.03" provider-name="Streamlink Devs, Twilight0">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.requests" version="2.12.4"/>
+    <import addon="script.module.futures" version="2.2.0"/>
+    <import addon="script.module.streamlink.crypto" version="1.4.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="resources/lib/"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Streamlink Library</summary>
+    <description>Streamlink Library for Kodi</description>
+    <platform>all</platform>
+    <license>Simplified BSD</license>
+    <source>https://github.com/Twilight0/script.module.streamlink.base/</source>
+    <language>en</language>
+    <!--<assets>-->
+      <!--<icon>resources/icon.png</icon>-->
+    <!--</assets>-->
+    <news>+ 2018.07.03
+- Plugins updates
+- Various other tweaks pulled from upstream</news>
+  </extension>
 </addon>
 
 <addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.8" provider-name="Shani">
