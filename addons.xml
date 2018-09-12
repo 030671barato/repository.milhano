@@ -307,29 +307,6 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.jami"
-       name="[COLOR white][B]Jami[/B][/COLOR]"
-       version="7.0"
-       provider-name="frenchdj">
- <requires>
-	<import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="plugin.video.youtube" optional="true" />
-    <import addon="script.module.simplejson" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">[ 2018 ]</summary>
-    <description>Videos Infantis em [COLOR lime][PT][/COLOR] e [COLOR yellow][BR][/COLOR].
-Playlists organizadas por categorias, totalmente dedicadas aos mais pequenos, com muitos desenhos animados recentes, classicos e musicais.
-Toda a fonte  vem de utilizadores do Youtube.
-[B][COLOR lime][ Aconselhado Youtube 6.*.* ][/B][/COLOR]</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.video.kidz"
          name="Kidz"
          version="1.00"
@@ -899,46 +876,6 @@ Apenas disponibiliza conteÃºdos de terceiros
 		<news>[I]v1.0.5[/I][CR]- Leia support</news>
 	</extension>
 </addon>
-
-    <addon id="repository.blamo" name="[COLOR red]Blamo Repo[/COLOR]" version="0.1.7" provider-name="Mr Blamo">
-        <requires>
-            <import addon="xbmc.addon" version="12.0.0"/>
-        </requires>
-        <extension point="xbmc.addon.repository" name="[COLOR red]Blamo Repo[/COLOR]">
-            <dir>
-			<info compressed="false">https://raw.githubusercontent.com/MrBlamo420/Project/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/MrBlamo420/Project/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/MrBlamo420/Project/master/zips/</datadir>
-            <hashes>false</hashes>
-			</dir>
-            <dir>
-                <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
-                <checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
-                <datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
-            </dir>
-            <dir>
-                <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-                <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-                <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-            </dir>
-            <dir>
-                <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
-                <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-                <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-            </dir>
-			<dir>
-                <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-                <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-                <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-            </dir>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>The Official Repo for Mr Blamo</summary>
-            <description>The Official Repo for Mr Blamo</description>
-            <platform>all</platform>
-            <genre>movies,usa</genre>
-        </extension>
-    </addon>
 
 <addon id="repository.kodibae" name="[COLOR pink]Kodi Bae Repository[/COLOR]" version="1.0.0" provider-name="kodibae">
     <extension point="xbmc.addon.repository" name="[COLOR pink]Kodi Bae Repository[/COLOR]">
