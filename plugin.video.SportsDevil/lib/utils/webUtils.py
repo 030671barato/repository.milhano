@@ -128,7 +128,7 @@ class BaseRequest(object):
         if 'streamlive.to' in urlparse.urlsplit(url).netloc:
             self.s.verify = False
 
-        if 'vipleague' in url or 'strikeout' in url or 'homerun' or 'nbastream' in url:
+        if 'vipleague' in url or 'strikeout' in url or 'homerun' or 'nbastreams' in url:
             self.s.verify = False
         
         if 'bypassed' in url or 'livecamtv' in url:
@@ -138,9 +138,6 @@ class BaseRequest(object):
             self.s.verify = False
 
         if 'vaughnlive.tv' in url:
-            self.s.verify = False
-        
-        if 'ustreamix' in url:
             self.s.verify = False
 
         
@@ -184,11 +181,6 @@ class BaseRequest(object):
         else:
             try:
                 r = self.s.get(url, headers=headers, timeout=20)
-                if r.status_code == 503:
-                    import cfscrape
-                    scraper = cfscrape.create_scraper(sess=self.s)
-                    r = scraper.get(url, headers=headers)
-                    #lib.common.log("JairoWebUtils:    %d"%r.status_code)
             except (requests.exceptions.MissingSchema):
                 return 'pass'
         

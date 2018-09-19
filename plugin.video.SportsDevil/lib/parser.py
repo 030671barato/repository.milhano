@@ -200,7 +200,6 @@ class Parser(object):
 
                     msg = 'Remote URL ' + inputList.curr_url + ' opened'
                     #common.log("JairoXparserPY: " + data)
-                    
                     if demystify:
                         msg += ' (demystified)'
                     common.log(msg)
@@ -218,8 +217,7 @@ class Parser(object):
                     items = self.__parseHtml(inputList.curr_url, data, inputList.rules, inputList.skill, inputList.cfg, lItem)
                     count = len(items)
                     common.log('    -> ' + str(count) + ' item(s) found')
-                    # for item in items:
-                    #     common.log("JairoXparserPY: " + str(items[0]))
+                    #common.log("JairoXparserPY: " + str(items[0]))
                     
                     
                     
@@ -667,9 +665,6 @@ class Parser(object):
 
             elif command == 'replaceRegex':
                 src = cc.replaceRegex(item, params, src)
-            
-            elif command == 'subRegex':
-                src = cc.subRegex(item, params, src)
 
             elif command == 'ifEmpty':
                 src = cc.ifEmpty(item, params, src)
@@ -691,15 +686,10 @@ class Parser(object):
                 
             elif command == 'cjsAesDec':
                 src = crypt.cjsAesDec(src,item.infos[params])
-
-            elif command == 'jsCryptoAESDec':
-                src = crypt.jsCryptoAESDec(src, item.infos[params])
-            
-            elif command == 'decryptMarioCS':
-                src = crypt.decryptMarioCS(src, item.infos[params])
                 
             elif command == 'm3u8AesDec':
                 src = crypt.m3u8AesDec(src,item.infos[params])
+
             
             elif command == 'drenchDec':
                 src = crypt.drenchDec(src,item.infos[params])
