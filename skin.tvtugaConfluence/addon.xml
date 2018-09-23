@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.tvtugaConfluence" version="1.0" name="tvtuga Confluence 18:made by(Milhano)" provider-name="TvTuga Milhano">
+	<requires>
+		<import addon="xbmc.gui" version="5.13.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<description lang="en_GB">
+			The tvtuga Confulence Skin Modified from the original Confulence skin. To add 25 Video addons Shourtcuts
+			The latest SKIN is now a fix for KODI 18 with the help of KODI ACE OF CLUBS developer
+			Thanks to KODI ACE of Clubs for his time to fix this SKIN for KODI 18
+			This Skin will be stored in http://milhano.pw/repositorio.tvtuga.milhano/
+		</description>
+		<platform>all</platform>
+		<license>GNU General Public License version 2</license>
+		<website>wwww.milhano.pw</website>
+		<email>j2mf4@hotmail.com</email>
+		<source>http://milhano.pw/repositorio.tvtuga.milhano/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+		</assets>
+		<news>Redesigned layout for updated Global Search addon</news>
+	</extension>
+</addon>

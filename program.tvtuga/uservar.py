@@ -7,12 +7,12 @@ ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
 ADDONTITLE     = 'tvtuga Builds'
 EXCLUDES       = [ADDON_ID]
 # Text File with build info in it.
-BUILDFILE      = 'http://milhano.pw/wizard.menu.milhano/wizard.txt'
+BUILDFILE      = 'http://milhano.com.pt/wizard.menu.milhano/wizard.txt'
 # How often you would list it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK    = 0
 # Text File with apk info in it.
-APKFILE        = 'http://milhano.pw/wizard.apk/wizard.apk.txt'
+APKFILE        = 'http://milhano.com.pt/wizard.apk/wizard.apk.txt'
 # Text File with Youtube Videos urls.  Leave as 'http://' to ignore
 YOUTUBETITLE   = ''
 YOUTUBEFILE    = 'http://'
