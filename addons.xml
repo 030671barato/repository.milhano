@@ -161,7 +161,7 @@
 </addon>
 
 
-<addon id="plugin.video.alado" name="ALADO" version="1.1" provider-name="alado">
+<addon id="plugin.video.alado" name="ALADO" version="1.2" provider-name="alado">
 
   <requires>
 
