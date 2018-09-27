@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+
+<addon id="addon.osroubados" name="CTRL C CTRL V" version="99.99" provider-name="CTRL C CTRL V">
+
+  <requires>
+
+    <import addon="xbmc.python" version="2.1.0"/>
+
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+
+    <import addon="script.module.beautifulsoup4"/>
+
+    <import addon="script.module.requests"/>
+
+    <import addon="script.module.httplib2"/>
+
+    <import addon="script.module.youtube.dl" optional="true"/>
+
+    <import addon="plugin.video.youtube"/>
+
+    <import addon="script.module.urlresolver" optional="true"/>
+
+    <import addon="script.module.simplejson"/>
+
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+
+        <provides>video</provides>
+
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">CTRL C CTRL V</summary>
+
+    <description lang="en">AQUI Podem roubar Ã¡ vontadinha !!! hahahaha</description>
+    <platform>all</platform>
+
+ </extension>
+
+</addon>
+
 <addon id="demagorgon.repository" name="Demagorgon repository" version="0.0.2" provider-name="Demagorgon">
 	<extension point="xbmc.addon.repository" name="Demagorgon Add-on Repository">
 		<info compressed="false">https://raw.githubusercontent.com/cmvac/demagorgon.repository/master/addons.xml</info>
@@ -1438,20 +1481,6 @@ v1.0.0
 		<summary lang="de">Offizielles Repository der Kodinerds</summary>
 		<description lang="en">This is the official Repository of the german Community 'Kodinerds' which you'll find at www.kodinerds.net. Most of the hosted Addons are supported by the members of the Community. Enjoy!</description>
 		<description lang="de">Das ist das offizielle Repository der deutschen Community 'Kodinerds', welche Du unter www.kodinerds.net findest. Die meisten der hier gehosteten Addons werden von den Mitgliedern der Community aktiv supported. Viel SpaÃŸ!</description>
-		<disclaimer></disclaimer>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="repository.magicality" name="Magicality Repo" version="0.0.3" provider-name="Wilson Magic">
-	<extension point="xbmc.addon.repository" name="Magicality Repo">
-		<info compressed="false">https://raw.githubusercontent.com/WilsonMagic/repository.magicality/master/zips/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/WilsonMagic/repository.magicality/master/zips/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/WilsonMagic/repository.magicality/master/zips</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Magicality</summary>
-		<description>Magicality - Home of Masterani Redux</description>
 		<disclaimer></disclaimer>
 		<platform>all</platform>
 	</extension>
