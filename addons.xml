@@ -1,57 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.kiddo" name="[B][COLORdarkgoldenrod]Kid[/COLOR][COLORburlywood]do[/COLOR][/B]" version="4.0.0.4" provider-name="[COLOR gold][B][Brackets][/B][/COLOR]">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-		<import addon="script.module.universalscrapers" version="1.0.0" />
-		<import addon="script.module.python.koding.aio" version="0.9.6.6" />
-		<import addon="script.module.beautifulsoup" version="3.2.1" />
-		<import addon="script.kiddo.easytopair" version="1.0" />
-		<import addon="script.speedtestnet" version="1.0.0" />
-                <import addon="script.module.requests" version="2.9.1" />
-                <import addon="script.module.addon.common" version="2.0.0" />
-                <import addon="script.module.xmltodict" version="0.9.0" />
-                <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-                <import addon="script.module.resolveurl" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="[login|startup]" />
-        <extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<language></language>
-		<summary lang="en">Special thanks to [COLORgold]NuMbErS[/COLOR] who wrote all the xmls in this Addon</summary>
-		<description lang="en">[COLORgold]PG - Parental Guidance Suggested - Some Mild Rude Humor. Some Material may not Be Suitable for Children.[/COLOR][CR]The author is not responsible for the use of this addon and does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]The Search process is the same as a search engine with no data actual hosted by the developer.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</description>
-		<supportedcontent>
-			<content>Kids movies</content>
-			<content>Kids tvshows</content>
-			<content>anime</content>
-			<content>animation shows</content>
-		</supportedcontent>
-		<genre>Kids Stuff</genre>
-		<video_preview>yt-id</video_preview>-->
-		<news>[COLORcrimson]=======[/COLOR]Never Forget Who Showed You The Way[COLORcrimson]=======[/COLOR]</news>
-                <website></website>
-
-		<source></source>
-
-		<assets>
-
-			<icon>icon.png</icon>
-
-    <icon>search.gif</icon>
-
-			<fanart>fanart.gif</fanart>
-
-		</assets>
-
-		<news></news>
-
-	</extension>
-
-</addon>
-
 <addon id="demagorgon.repository" name="Demagorgon repository" version="0.0.2" provider-name="Demagorgon">
 	<extension point="xbmc.addon.repository" name="Demagorgon Add-on Repository">
 		<info compressed="false">https://raw.githubusercontent.com/cmvac/demagorgon.repository/master/addons.xml</info>
@@ -213,48 +161,6 @@
 </addon>
 
 
-<addon id="plugin.video.alado" name="ALADO" version="1.2" provider-name="alado">
-
-  <requires>
-
-    <import addon="xbmc.python" version="2.1.0"/>
-
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-
-    <import addon="script.module.beautifulsoup4"/>
-
-    <import addon="script.module.requests"/>
-
-    <import addon="script.module.httplib2"/>
-
-    <import addon="script.module.youtube.dl" optional="true"/>
-
-    <import addon="plugin.video.youtube"/>
-
-    <import addon="script.module.urlresolver" optional="true"/>
-
-    <import addon="script.module.simplejson"/>
-
-  </requires>
-
-  <extension point="xbmc.python.pluginsource" library="default.py">
-
-        <provides>video</provides>
-
-  </extension>
-
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">alado</summary>
-
-    <description lang="en">alado</description>
-    <platform>all</platform>
-
- </extension>
-
-</addon>
-
 <addon id="plugin.video.Anima.PT"
        name="Anima.PT"
        version="1.0.2"
@@ -281,41 +187,6 @@
     <description lang="en">Criado para vocÃªs! Obrigado por estarem nas nossas vidas.</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.video.BrazucaPlay"
-name="[B][COLOR white]BRAZUCA PLAY[/COLOR][/B]"
-version="[B][COLOR white]1.9[/COLOR][/B]"
-provider-name="[B][COLOR white]Brazuca Play[/COLOR][/B]">
-<requires>
-<import addon="xbmc.python" version="2.25.0"/>
-<import addon="script.module.t0mm0.common"/>
-<import addon="script.module.beautifulsoup"/>
-<import addon="script.module.beautifulsoup4"/>
-<import addon="script.module.simple.downloader"/>
-<import addon="script.module.requests"/>
-<import addon="script.module.httplib2"/>
-<import addon="script.module.urlresolver"/>
-<import addon="script.module.simplejson"/>
-<import addon="script.common.plugin.cache"/>
-<import addon="script.module.metahandler"/>
-</requires>
-<extension point="xbmc.python.pluginsource" library="default.py">
-<provides>video</provides>
-</extension>
-<extension point="xbmc.addon.metadata">
-<summary>[B][COLOR white]TV, Filmes, SÃ©ries, Desenhos e Animes.[/COLOR]</summary>
-<description lang="pt">[B][COLOR white]Brazuca Play Ã© apenas um AGREGADOR de links e, assim como o Google.com, apenas agrega e organiza os links externos. NÃ£o somos responsÃ¡veis pelos arquivos aqui encontrados.[/COLOR][/B]</description>
-<disclaimer lang="en">[B][COLOR white]OBRIGADO POR USAR NOSSO ADD-ON > DOAÃ‡Ã•ES: [/COLOR][COLOR gold]BIT.LY/BRPLAY[/COLOR][/B]</disclaimer>
-<platform>all</platform>
-<assets>
-<icon>icon.png</icon>
-<fanart>fanart.jpg</fanart>
-<screenshot>resources/screenshots/home.png</screenshot>
-<screenshot>resources/screenshots/movies.png</screenshot>
-<screenshot>resources/screenshots/series.png</screenshot>
-</assets>
-</extension>
 </addon>
 
 <addon id="plugin.video.copyandpaste" name="Copy And Paste" version="1.4" provider-name="LT">
@@ -520,48 +391,6 @@ Fixed search issue caused by character accents
 </addon>
 
 
-<addon id="plugin.video.formigatv" name="FormigaTV" version="0.1" provider-name="formiga">
-
-  <requires>
-
-    <import addon="xbmc.python" version="2.1.0"/>
-
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-
-    <import addon="script.module.beautifulsoup4"/>
-
-    <import addon="script.module.requests"/>
-
-    <import addon="script.module.httplib2"/>
-
-    <import addon="script.module.youtube.dl" optional="true"/>
-
-    <import addon="plugin.video.youtube"/>
-
-    <import addon="script.module.urlresolver" optional="true"/>
-
-    <import addon="script.module.simplejson"/>
-
-  </requires>
-
-  <extension point="xbmc.python.pluginsource" library="default.py">
-
-        <provides>video</provides>
-
-  </extension>
-
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">FormigaTV</summary>
-
-    <description lang="en">FormigaTV</description>
-    <platform>all</platform>
-
- </extension>
-
-</addon>
-
 <addon id="plugin.video.guiadoluiz" name="Guia do Luiz" version="1.0.0" provider-name="Kodish MC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -742,43 +571,6 @@ Toda a fonte  vem de utilizadores do Youtube.
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Celtic FC Live And On Demand</summary>
     <description lang="en">Celtic FC Live And On Demand</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.live.kodiazor"
-       name="[COLOR orange][B]Kodiazor [COLOR orange]Team [COLOR orange]Addon[/B][/COLOR]"
-       version="0.0.1"
-       provider-name="[COLOR orange][B]Dj Azorean e Ricardo Pedroso[/B][/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-	<import addon="repository.kodil" version="1.2"/>
-	<import addon="repository.blamo" version="0.0.4"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" optional="true" />
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />
-     <import addon="script.module.livestreamer" optional="true"/>
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-
-
-
-  <extension point="xbmc.addon.metadata">
-    <summary>[COLOR yellow][B]Kodiazor Team Addon, tv grÃ¡tis para todos.[/B][/COLOR]</summary>
-    <description>
-        [COLOR orange][B]Kodiazor Team Addon[/B][/COLOR]
-
-    </description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -1190,7 +982,7 @@ First new release
   </extension>
 </addon>
 
-<addon id="plugin.video.teamblue"
+<addon> id="plugin.video.teamblue"
        name="[COLOR blue]T[/COLOR]eam[COLOR blue]B[/COLOR]lue Live Events"
        version="2.4"
        provider-name="Eduardo Pinto">
@@ -1676,7 +1468,7 @@ v1.0.0
         </extension>
     </addon>
 
-<addon id="repository.vavooto" name="VAVOO.TO Repository" version="1.0.0" provider-name="VAVOO.TO">
+<addon> id="repository.vavooto" name="VAVOO.TO Repository" version="1.0.0" provider-name="VAVOO.TO">
     <extension point="xbmc.addon.repository" name="VAVOO.TO Repository">
         <info compressed="false">http://vavoo.to/addons.xml</info>
 		<checksum>http://vavoo.to/addons.xml.md5</checksum>
@@ -1690,7 +1482,7 @@ v1.0.0
 	</extension>
 </addon>
 
-<addon id="repository.Zero" name="Zero repository" version="1.0.2" provider-name="Zero">
+<addon> id="repository.Zero" name="Zero repository" version="1.0.2" provider-name="Zero">
 	<extension point="xbmc.addon.repository" name="Zero Add-on Repository">
 		<info compressed="false">https://raw.githubusercontent.com/jennyrach/Zero/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/jennyrach/Zero/master/addons.xml.md5</checksum>
@@ -1711,7 +1503,7 @@ v1.0.0
 	</extension>
 </addon>
 
-<addon id="screensaver.praiaspt" name="PraiasPT" version="1.0" provider-name="demagorgon, forked from Enen92's Areal">
+<addon> id="screensaver.praiaspt" name="PraiasPT" version="1.0" provider-name="demagorgon, forked from Enen92's Areal">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>
@@ -1740,7 +1532,7 @@ v1.0.0
     </extension>
 </addon>
 
-<addon id="script.kcleaner" name="KCleaner" provider-name="Dalibor Lanik" version="3.1">
+<addon> id="script.kcleaner" name="KCleaner" provider-name="Dalibor Lanik" version="3.1">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -1773,7 +1565,7 @@ v1.0.0
   </extension>
 </addon>
 
-<addon id="script.module.metahandler"
+<addon> id="script.module.metahandler"
      name="metahandler"
      version="3.0.3"
      provider-name="Eldorado, jsergio">
@@ -1798,7 +1590,7 @@ v1.0.0
   </extension>
 </addon>
 
-<addon id="script.module.nanscrapers" name="NaN Scrapers" version="0.5.51" provider-name="Team NaN">
+<addon> id="script.module.nanscrapers" name="NaN Scrapers" version="0.5.51" provider-name="Team NaN">
         <requires>
                 <import addon="xbmc.python" version="2.1.0"/>
                 <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -1824,7 +1616,7 @@ v1.0.0
         </extension>
 </addon>
 
-<addon id="script.module.requests"
+<addon> id="script.module.requests"
        name="requests"
        version="2.19.1"
        provider-name="kennethreitz">
@@ -1850,7 +1642,7 @@ v1.0.0
   </extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.07.03" provider-name="Streamlink Devs, Twilight0">
+<addon> id="script.module.streamlink.base" name="Streamlink Library" version="2018.07.03" provider-name="Streamlink Devs, Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
@@ -1874,7 +1666,7 @@ v1.0.0
   </extension>
 </addon>
 
-<addon id="script.plex.milhano"
+<addon> id="script.plex.milhano"
        name="Plex Milhano"
        version="0.1"
        provider-name="Plex">
@@ -1930,7 +1722,7 @@ Fix failure to sign in when signed off externally (Issue #110, #117)
     </extension>
 </addon>
 
-<addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.8" provider-name="Shani">
+<addon> id="script.video.F4mProxy" name="F4mProxy" version="2.8.8" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.requests" />
@@ -1946,7 +1738,7 @@ Fix failure to sign in when signed off externally (Issue #110, #117)
     </extension>
 </addon>
 
-<addon id="service.fmc.autolegendas"
+<addon> id="service.fmc.autolegendas"
     name="FMC Auto Legendas PT" version="1.1" provider-name="frenchdj">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
@@ -1967,7 +1759,7 @@ Fix failure to sign in when signed off externally (Issue #110, #117)
   </extension>
 </addon>
 
-<addon id="skin.tvtugaConfluence" version="1.0" name="tvtuga Confluence 18:made by(Milhano)" provider-name="TvTuga Milhano">
+<addon> id="skin.tvtugaConfluence" version="1.0" name="tvtuga Confluence 18:made by(Milhano)" provider-name="TvTuga Milhano">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0"/>
 	</requires>
