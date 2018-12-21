@@ -361,36 +361,6 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.foradabox"
-       name="Fora da Box"
-       version="1.1"
-       provider-name="frenchdj, Demagorgon e bit.ly/[COLOR blue][B]AMO[/B][/COLOR][COLOR green]box[/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" optional="true" />
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />
-     <import addon="script.module.livestreamer" optional="true"/>
-     <import addon="script.module.pyamf" optional="true"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Fora da Box</summary>
-    <description>Tudo o que o media center jÃ¡ tinha, mais aquilo que ainda lhe faltava. Todo o conteudo deste addon provÃ©m do Youtube.</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-
 <addon id="plugin.video.guiadoluiz" name="Guia do Luiz" version="1.0.0" provider-name="Kodish MC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1024,48 +994,6 @@ Apenas disponibiliza conteÃºdos de terceiros
   </extension>
 </addon>
 
-
-<addon id="plugin.video.tvtuga" name="TvTugaIPTV" version="2.0" provider-name="TvTugaIPTV">
-
-  <requires>
-
-    <import addon="xbmc.python" version="2.1.0"/>
-
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-
-    <import addon="script.module.beautifulsoup4"/>
-
-    <import addon="script.module.requests"/>
-
-    <import addon="script.module.httplib2"/>
-
-    <import addon="script.module.youtube.dl" optional="true"/>
-
-    <import addon="plugin.video.youtube"/>
-
-    <import addon="script.module.urlresolver" optional="true"/>
-
-    <import addon="script.module.simplejson"/>
-
-  </requires>
-
-  <extension point="xbmc.python.pluginsource" library="default.py">
-
-        <provides>video</provides>
-
-  </extension>
-
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">TvTugaTV</summary>
-
-    <description lang="en">TvTugaMilhano</description>
-    <platform>all</platform>
-
- </extension>
-
-</addon>
 
 <addon id="plugin.video.vida"
        name="[COLOR cyan][B]--VIDA--[/B][/COLOR]"
