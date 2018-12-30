@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.1" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon id="plugin.video.zeus" name="Zeus" version="1.0" provider-name="ZEUS">
   <requires>
