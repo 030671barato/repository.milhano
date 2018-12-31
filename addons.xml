@@ -1,28 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.zeus" name="Zeus" version="1.1" provider-name="ZEUS">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4"/>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.httplib2"/>
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube"/>
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en"></summary>
-    <description lang="en">Mais um addon PT da Team Milhano</description>
-    <platform>all</platform>
- </extension>
-</addon>
-
 <addon id="demagorgon.repository" name="Demagorgon repository" version="0.0.2" provider-name="Demagorgon">
 	<extension point="xbmc.addon.repository" name="Demagorgon Add-on Repository">
 		<info compressed="false">https://raw.githubusercontent.com/cmvac/demagorgon.repository/master/addons.xml</info>
@@ -97,26 +74,6 @@
 [CR]Executar manutenÃ§Ã£o, Limpar cache, Limpar pacotes, manter seus dados do Trakt e Real Debrid e muito mais.</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.program.indigo" version="4.0.8" name="Indigo" provider-name="tvaddons">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-	</requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video executable</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="startup"/>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Indigo is your gateway to the world of unofficial Kodi addons!</summary>
-        <description lang="en">Indigo is your gateway to the world of unofficial Kodi addons! Please visit www.tvaddons.co for support.</description>
-        <disclaimer lang="en">Kodi is a registered trademark of the XBMC Foundation. We are not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation. Furthermore, any software, addons, or products offered by us will receive no support in official Kodi channels, including the Kodi forums and various social networks.</disclaimer>
-        <language>en</language>
-        <platform>all</platform>
-        <forum>https://www.tvaddons.co/forums</forum>
-        <website>https://www.tvaddons.co</website>
-        <source>https://github.com/tvaddonsco/plugin.program.indigo</source>
-    </extension>
 </addon>
 
 <addon id="plugin.video.acdcIPTV"
@@ -212,63 +169,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.copyandpaste" name="Copy And Paste" version="1.4" provider-name="LT">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.universalscrapers" version="1.0.0" />
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.beautifulsoup" version="3.2.1" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.addon.common" version="2.0.0" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.resolveurl" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>audio video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en">Just Thumbs</summary>
-      <summary lang="he"></summary>
-      <description lang="en">Just a shit addon copying the rest with style and shit</description>
-      <description lang="he"></description>
-      <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-      <disclaimer lang="he"></disclaimer>
-      <platform>all</platform>
-        <website></website>
-        <video_guide></video_guide>
-    </extension>
-</addon>
-
-<addon id="plugin.video.diamondback" name="[COLOR lime]Diamondback[/COLOR]" version="1.0" provider-name="Rattlehead">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.universalscrapers" version="1.0.0" />
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.beautifulsoup" version="3.2.1" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.addon.common" version="2.0.0" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.resolveurl" />
-        <!--<import addon="script.module.urlresolver" />-->
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Diamondback</summary>
-        <description lang="en"></description>
-        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-        <platform>all</platform>
-        <website/>
-        <video_guide>https://youtu.be/0kFhoWahtFw</video_guide>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-    </extension>
-</addon>
-
 <addon id="plugin.video.Elektra_Vault"
        name="Elektra Vault"
        version="1.0.4"
@@ -298,50 +198,6 @@
     <description lang="en">[COLOR aqua]Live Sport Links Can Go Up And Down//I do Not Host Any Files,These Are Freely Avaliable On Net[/COLOR]</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.video.exodus" version="6.0.0" name="Exodus" provider-name="Exodus">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.exodus" />
-		<import addon="script.exodus.artwork" />
-		<import addon="script.exodus.metadata" />
-		<import addon="script.module.resolveurl" />
-		<import addon="script.module.requests" />
-		<import addon="script.module.metahandler" version="1.0.0" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="exodus.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Exodus</summary>
-		<description lang="en">Please visit [COLOR blue]www.tvaddons.co[/COLOR] for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor itâ€™s intended use, it is simply a third party plugin which has been added to your system.</description>
-		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-		<description lang="de">Bitte besuche [COLOR blue]www.tvaddons.co[/COLOR] fÃ¼r UnterstÃ¼tzung und Fragen zu Exodus! Beachte dabei, dass Exodus nicht offizieller Teil des Media Players ist den du gerade verwendest und daher nicht von dem offiziellen Support-KanÃ¤le abgedeckt wird, dieses Addon hat nichts zu tun mit dem Media-Player selbst, noch ist es dafÃ¼r beabsichtigt, es handelt sich hierbei lediglich um ein Drittanbieter-Anwendung die dem System hinzugefÃ¼gt wurde.</description>
-		<disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
-		<description lang="fr">SVP visitez [COLOR blue]www.tvaddons.co[/COLOR] pour avoir de l'aide sur Exodus. Prenez note qu'Exodus n'est pas une partie intÃ©grante de votre outil de visionnement multimedia et SVP ne le mentionnez pas dans les media sociaux officiels, cet addiciel n'a rien a voir avec votre lecteur multimedia lui mÃªme, c'est simplement un addiciel qui a Ã©tÃ© ajoutÃ© Ã  votre systÃ¨me.</description>
-		<disclaimer lang="fr">L'auteur n'hÃ©berge pas ou ne distribue pas le contenu qui vous est affichÃ© avec cet addiciel. L'auteur n'a pas d'alliance avec les distributeurs de contenu.</disclaimer>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum>https://www.tvaddons.co/forums/</forum>
-		<website>https://www.tvaddons.co/</website>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
-    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
-		</assets>
-		<news>
-v6.0.0 (JUN-2018)
-Even more Scraper Fixes
-CFSCRAPE Fix
-Moderator Disabled
-Fixed Trakt On Deck Magical Dissapearing Act
-Fixed search issue caused by character accents
-		</news>
-	</extension>
 </addon>
 
 <addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="www.netfreex.com.br">
@@ -403,41 +259,6 @@ Fixed search issue caused by character accents
 Playlists organizadas por categorias, totalmente dedicadas aos mais pequenos, com muitos desenhos animados recentes, classicos e musicais.
 Toda a fonte  vem de utilizadores do Youtube.
 [B][COLOR lime][ Aconselhado Youtube 6.*.* ][/B][/COLOR]</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.JokerSports"
-       name="[COLORlime]Joker Sports[/COLOR]"
-       version="2.2.9"
-       provider-name="Maverick">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.universalscrapers" version="1.0.0" />
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.beautifulsoup" version="3.2.1" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.addon.common" version="2.0.0" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-		<import addon="plugin.video.youtube" version="3.0.0"/>
-		<import addon="script.module.dateutil" />
-        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.resolveurl" />
-		<import addon="script.module.ATFlive" />
-		<import addon="script.module.jokerHD" />
-		<import addon="script.module.ATFmobdro" />
-		<import addon="script.module.ATFTV" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-    </extension>
-	<extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>false</reuselanguageinvoker>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-    <extension point="xbmc.addon.metadata">
-       <summary lang="en">Maverick TV</summary>
-    <description lang="en">Maverick TV</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -890,49 +711,6 @@ First new release
     <platform>all</platform>
   </extension>
 </addon>
-
-<addon> id="plugin.video.teamblue"
-       name="[COLOR blue]T[/COLOR]eam[COLOR blue]B[/COLOR]lue Live Events"
-       version="2.4"
-       provider-name="Eduardo Pinto">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="pt">Add-on ao estilo Agenda Desportiva</summary>
-    <description lang="pt">
-O add-on TeamBlue apresenta as seguintes secÃ§Ãµes:
-Agenda desportiva com transmissÃµes em direto de vÃ¡rias modalidades
-Sports Replays (Futebol-Desportos Motorizados-WWE-UFC-NBA)
-Canais World IPTV (Portugal-Alemanha-Espanha-FranÃ§a-ItÃ¡lia-Inglaterra-Brasil-Estados Unidos-Adultos)
-Canais Arenavision (para ver com o Plexus)
-Webcam's
-NOTA: para a correta visualizaÃ§Ã£o de alguns canais Ã© necessÃ¡rio ter instalados:
-f4mtester â€“ f4mproxy - Sports Devil â€“ Plexus
-O criador deste addon nÃ£o possui nem estÃ¡ ligado de nenhuma forma ao conteÃºdo nele disponibilizado.
-Apenas disponibiliza conteÃºdos de terceiros
-	</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 
 <addon id="plugin.video.vida"
        name="[COLOR cyan][B]--VIDA--[/B][/COLOR]"
