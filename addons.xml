@@ -1,5 +1,148 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.NeXus"
+       name="[COLOR red][B]NeXus[/B][/COLOR]"
+       version="3.0"
+       provider-name="Loki_rag">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.simplejson" /> 
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+	<import addon="script.module.livestreamer" optional="true"/>
+	
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"></summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.avezy" name="AvEZY" version="1.4.1" provider-name="Wazzu">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="program.plexus" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>AvEZY</summary>
+		<description>Interfaz para ArenaVision desarrollado por Wazzu</description>
+		<platform>all</platform>
+		<license/>
+		<forum/>
+		<website/>
+		<email>egrueda@gmail.com</email>
+		<disclaimer>El autor no aloja ni distribuye cualquier contenido que ud. pudiera reproducir usando este addon. El autor no tiene participacion en el desarrollo de cualquier tecnologia incluida.</disclaimer>
+		<source/>
+	</extension>
+	<extension point="xbmc.addon.repository" name="AvEZY">
+		<info compressed="true">https://raw.githubusercontent.com/egrueda/kodi-repo/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/egrueda/kodi-repo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/egrueda/kodi-repo/master/zip/</datadir>
+	</extension>
+</addon>
+
+<addon
+	id="plugin.video.arenavisionezy"
+	name="ArenaVision EZY (MOD)"
+	version="5.3.9"
+	provider-name="Wazzu (MOD by Teco)">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="program.plexus" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>ArenaVision EZY</summary>
+		<description>Esto no es un proyecyo paralelo, simplemente es una modificacion para Kodi 16</description>
+		<platform>all</platform>
+		<license/>
+		<forum/>
+		<website/>
+		<email>egrueda@gmail.com</email>
+		<source/>
+	</extension>
+	<extension point="xbmc.addon.repository" name="ArenaVision EZY">
+		<info compressed="false">https://raw.githubusercontent.com/egrueda/kodi-repo/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/egrueda/kodi-repo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/egrueda/kodi-repo/master/zip/</datadir>
+	</extension>
+</addon>
+
+<addon id="plugin.video.ZeusTV"
+       name="ZEUSTV"
+       version="10.0"
+       provider-name="ZEUS TV">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+	<import addon="script.module.livestreamer" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>BY TEAM MILHANO</summary>
+    <description>TEAM MILHANO "WE LEAD THE WAY"
+ </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.AladoTV"
+       name="ALADOTV"
+       version="10.0"
+       provider-name="ALADO TV">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+	<import addon="script.module.livestreamer" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>BY TEAM MILHANO</summary>
+    <description>TEAM MILHANO "WE LEAD THE WAY"
+ </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="demagorgon.repository" name="Demagorgon repository" version="0.0.2" provider-name="Demagorgon">
 	<extension point="xbmc.addon.repository" name="Demagorgon Add-on Repository">
 		<info compressed="false">https://raw.githubusercontent.com/cmvac/demagorgon.repository/master/addons.xml</info>
