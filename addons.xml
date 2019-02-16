@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.milhano" name=" [B][COLOR orange]Milhano Wizard[/COLOR][/B]" version="0.1" provider-name="[B][COLOR red]Team Milhano Builds[/COLOR][/B]">
+<addon id="plugin.program.milhano" name=" [B][COLOR orange]Milhano Wizard[/COLOR][/B]" version="1.1" provider-name="[B][COLOR red]Team Milhano Builds[/COLOR][/B]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	</requires>

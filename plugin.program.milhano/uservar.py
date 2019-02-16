@@ -14,14 +14,14 @@ BUILDERNAME    = 'Milhano Build'
 EXCLUDES       = [ADDON_ID, 'repo.Milhano', 'My_Builds', 'backupdir']
 BUILDFILE      = 'http://milhano.com.pt/wizard.menu.milhano/wizard.txt'
 UPDATECHECK    = 0
-APKFILE        = 'http://'
+APKFILE        = 'http://milhano.com.pt/wizard.apk/wizard.apk.txt'
 YOUTUBETITLE   = 'http://'
 YOUTUBEFILE    = 'http://'
 ADDONFILE      = 'http://milhano.com.pt/wizard.menu.milhano/wizaddons.txt'
 ADVANCEDFILE   = 'http://'
 ROMPACK        = 'http://'
 EMUAPKS        = 'http://'
-ADDONPACK      = 'http://'
+ADDONPACK      = 'http://milhano.com.pt/wizard.menu.milhano/temas.txt'
 PATH           = xbmcaddon.Addon().getAddonInfo('path')
 ART            = os.path.join(PATH, 'resources', 'art')
 
