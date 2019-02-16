@@ -1593,21 +1593,6 @@ First new release
   </extension>
 </addon>
 
-<addon id="program.tvtuga" name="TvTuga Builds" version="1.3" provider-name="Familia tvtuga">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.service" library="startup.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">tvtuga Wizard</summary>
-    <description lang="en">Welcome to the tvtuga Wizard where you can get all the latest Custom Builds for kodi and spmc</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="repository.aenemapy" name="Aenemapy Addons Repository" version="2018.01.04.2" provider-name="aenemapy">
     <extension point="xbmc.addon.repository" name="Aenemapy Addons Repository">
 		<info compressed="false">https://raw.githubusercontent.com/aenemapy/aenemapyrepo/master/addons.xml</info>
