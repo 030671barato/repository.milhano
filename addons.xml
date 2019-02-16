@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.f4mTester" version="2.7.9" name="f4mTester" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.7.9"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    
+
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.program.milhano" name=" [B][COLOR orange]Milhano Wizard[/COLOR][/B]" version="1.1" provider-name="[B][COLOR red]Team Milhano Builds[/COLOR][/B]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -929,23 +946,6 @@ Revert to stable code
     <description lang="en">[COLOR aqua]Live Sport Links Can Go Up And Down//I do Not Host Any Files,These Are Freely Avaliable On Net[/COLOR]</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="www.netfreex.com.br">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.video.F4mProxy" version="2.7.1"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-
-
-    <extension point="xbmc.addon.metadata">
-        <summary>Addon necessÃ¡rio para o correto funcionamento do NetFreeX Play</summary>
-        <description></description>
-        <platform>all</platform>
-    </extension>
 </addon>
 
 <addon id="plugin.video.flechanegra" name="[COLOR red]FlechaNegra[/COLOR]" version="0.1" provider-name="Ike">

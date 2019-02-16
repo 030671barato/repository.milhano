@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="www.netfreex.com.br">
+<addon id="plugin.video.f4mTester" version="2.7.9" name="f4mTester" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.video.F4mProxy" version="2.7.1"/>
+        <import addon="script.video.F4mProxy" version="2.7.9"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
@@ -10,7 +10,7 @@
     
 
     <extension point="xbmc.addon.metadata">
-        <summary>Addon necessário para o correto funcionamento do NetFreeX Play</summary>
+        <summary>f4mTester</summary>
         <description></description>
         <platform>all</platform>
     </extension>
