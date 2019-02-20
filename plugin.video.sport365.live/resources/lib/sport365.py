@@ -1,9 +1,25 @@
 # -*- coding: utf-8 -*-
-import urllib2,urllib
-import re,time
-import time,json,base64
-import cookielib,aes,os
+'''
+╭━━╮╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╭╮
+┃╭╮┃╱╱╱╱╱╱╱╱╱╭╯╰╮╱╱╱╱╱╱┃┃
+┃╰╯╰┳╮╭┳━━┳━━╋╮╭╋━━┳┳━╮┃╰━┳━━╮
+┃╭━╮┃┃┃┃╭╮┃╭╮┃┃┃┃━━╋┫╭╮┫╭╮┃╭╮┃
+┃╰━╯┃╰╯┃╰╯┃╭╮┃┃╰╋━━┃┃┃┃┃┃┃┃╰╯┃
+╰━━━┻━━┻━╮┣╯╰╯╰━┻━━┻┻╯╰┻╯╰┻━━╯
+╱╱╱╱╱╱╱╭━╯┃
+╱╱╱╱╱╱╱╰━━╯
+'''
 
+import sys
+import traceback
+import urllib2
+import urllib
+import re
+import time
+import json
+import base64
+import cookielib
+import aes
 import requests
 
 BASEURL='http://www.sport365.live/en/main'
@@ -60,7 +76,15 @@ def getChannels(addheader=False):
             ret = ret[0]
             print 'key %s'%ret
             break
-    url='http://www.sport365.live/en/events/-/1/-/-/-300'
+
+    from datetime import datetime
+    ts = time.time()
+    utc_offset = (datetime.fromtimestamp(ts) -
+                  datetime.utcfromtimestamp(ts)).total_seconds()
+
+    minutes = int(utc_offset) / 60
+    url = 'http://www.sport365.live/en/events/-/1/-/-/' + str(minutes)
+
     content = getUrl(url)
     ids = [(a.start(), a.end()) for a in re.finditer('onClick=', content)]
     ids.append( (-1,-1) )
@@ -202,13 +226,13 @@ class JsUnwiser:
         #print 'sJavascript',sJavascript
         page_value=""
         try:        
-            ss="w,i,s,e=("+sJavascript+')' 
+            ss = "w,i,s,e=("+sJavascript+')'
             exec (ss)
             page_value=self.__unpack(w,i,s,e)
         except: traceback.print_exc(file=sys.stdout)
         return page_value
         
-    def __unpack( self,w, i, s, e):
+    def __unpack( self, w, i, s, e):
         lIll = 0;
         ll1I = 0;
         Il1l = 0;
