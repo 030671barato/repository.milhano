@@ -2,11 +2,7 @@ import xbmc
 import xbmcgui
 import xbmcaddon
 import os
-
-try:
-    from urllib.request import urlopen, Request  # python 3.x
-except ImportError:
-    from urllib2 import urlopen, Request  # python 2.x
+from libs import kodi
 
 Addon = xbmcaddon.Addon()
 addon_id = Addon.getAddonInfo('id')
@@ -38,6 +34,7 @@ KEY_ESC = 61467
 
 
 class PopupNote(xbmcgui.WindowXMLDialog):
+    xbmc.executebuiltin("UpdateAddonRepos")
     contents = ''
     note = 4001
     support = 4002
@@ -59,8 +56,6 @@ class PopupNote(xbmcgui.WindowXMLDialog):
         self.content_box_control = 20302
 
     def onInit(self):
-        # note_type = settings.getSetting("noteType")
-        # image = settings.getSetting("noteImage")
         self.contents = settings.getSetting("noteMessage")
         title_box = self.getControl(self.title_box_control)
         title_box.setText("[B][COLOR lime]Unofficial Kodi Community Updates[/COLOR][/B]")
@@ -76,9 +71,15 @@ class PopupNote(xbmcgui.WindowXMLDialog):
 
     def onClick(self, control_id):
         if control_id == self.git_browser:
+            settings.setSetting("noteType", '')
+            settings.setSetting("noteImage", '')
+            settings.setSetting("noteMessage", '')
+            #xbmc.executebuiltin("UpdateAddonRepos")
+            #xbmc.sleep(50)
             self.close()
-            xbmc.executebuiltin("RunAddon(plugin.git.browser)")
-
+            import installer
+            installer.github_main('')
+            
         elif control_id == self.remind_later:
             settings.setSetting("noteType", '')
             settings.setSetting("noteImage", '')
@@ -164,17 +165,6 @@ def addon_path(f, fe=''):
     return xbmc.translatePath(os.path.join(path, f + fe))
 
 
-def open_url(path):
-    try:
-        req = Request(path)
-        req.add_header('User-Agent',
-                       'Mozilla/5.0 (Windows U Windows NT 5.1 en-GB rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-        contents = urlopen(req).read().encode('utf-8')
-    except IOError:
-        contents = 'Our servers seem to be having some trouble.\nPlease try again later!'
-    return contents
-
-
 def check_news2(message_type, override_service=False):
     # debob(["notifications-on-startup", settings.getSetting("notifications-on-startup"), "override_service ",
     #        override_service])
@@ -188,9 +178,10 @@ def check_news2(message_type, override_service=False):
                     html = temp_file.read()
             elif os.path.isfile(info_location3):
                 with open(info_location3, 'rb') as temp_file:
-                    html = open_url(temp_file.read().strip()) if temp_file.read() else ''
+                    html = kodi.read_file(temp_file.read().strip()) if temp_file.read() else ''
             else:
-                html = open_url(info_location)
+                # html = open_url(info_location)
+                html = kodi.read_file(info_location)
         except IOError:
             html = ''
         new_image = html.split('|||')[0].strip() if '|||' in html else ''
