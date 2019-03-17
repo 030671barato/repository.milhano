@@ -1,0 +1,16 @@
+2.5.0 09-03-2019
+- add f4mtester dependency
+- re-organize addon
+- view links in folder mode(to avoid multi-requests)
+- disable ads threads
+- use of f4m to play the streams
+
+
+
+
+
+
+
+
+
+ 
