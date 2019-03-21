@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.MILHANOPAIR"
   name="[B][COLORblue]MILHANO[/COLOR][/B][COLORwhite]PAIR[/COLOR]"
-  version="0.0.1" 
+  version="0.0.2" 
   provider-name="MILHANO">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="repository.tvtuga"/>		
+    <import addon="repository.milhano"/>		
   </requires>
   <extension point="xbmc.python.script" library="addon.py">
     <provides>executable</provides>
