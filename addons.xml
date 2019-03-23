@@ -1,5 +1,221 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="repository.uk1" name="uk1" version="1.0.4" provider-name="we try">
+       <extension point="xbmc.addon.repository" name="we try">
+       
+            <dir>      
+            <info compressed="false">http://uk1.site/_repo/addons.xml</info>
+            <checksum>http://uk1.site/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://uk1.site/_repo/</datadir>
+            <hashes>false</hashes>
+            </dir>
+            
+            <dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+		</dir>
+        
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+            <hashes>false</hashes>
+        </dir>
+	
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+		
+		<dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+        </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Welcome to the UK1 Repository</summary>
+            <description></description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.rings" name="[COLOR red][B]Ring of Saturn[/B][/COLOR] [COLOR snow][B]Repository[/B][/COLOR]" version="0.5" provider-name="Universe">
+			<extension point="xbmc.addon.repository" name="Rings of Saturn Repository">
+			<dir>
+				<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml</info>
+				<checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
+				<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
+			</dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+		<dir>
+            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+            <hashes>false</hashes>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+        </dir>
+		<dir>
+			<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+			<checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+	    </dir>
+				<info compressed="false">http://worldkodi.com/Repo/addons.xml</info>
+				<checksum>http://worldkodi.com/Repo/addons.xml.md5</checksum>
+				<datadir zip="true">http://worldkodi.com/Repo/</datadir>
+			</extension>
+			<extension point="xbmc.addon.metadata">
+			<description lang="en">This repository has the latest work from Universe</description>
+			<disclaimer lang="en">For help and support ... Please visit my Twitter</disclaimer>
+			<language></language>
+			<platform>all</platform>
+			<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		 </extension>
+		</addon>
+		
+<addon id="repository.kongrepo" name="Kong Repo" version="2.0" provider-name="KongMedia">
+	<extension point="xbmc.addon.repository" name="KongMedia">
+		<info compressed="false">http://www.planet-universe.co.uk/addons/addons.xml</info>
+		<checksum>http://www.planet-universe.co.uk/addons/addons.xml</checksum>
+		<datadir zip="true">http://www.planet-universe.co.uk/addons/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>KongMedia Addons</summary>
+		<description>Kong Media services addons</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.goldengun" name="[COLOR yellow]goldengun[/COLOR]" version="9.1.1" provider-name="goldengun">
+	<extension point="xbmc.addon.repository" name="goldengun">
+	    <dir>
+		    <info compressed="false">https://raw.githubusercontent.com/Goldengunrepo/install/master/goldengun/zips/addons.xml</info>
+		    <checksum>https://raw.githubusercontent.com/Goldengunrepo/install/master/goldengun/zips/addons.xml.md5</checksum>
+		    <datadir zip="true">https://raw.githubusercontent.com/Goldengunrepo/install/master/goldengun/zips</datadir>
+        </dir>
+		<dir>
+		    <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/stitches5150/PaddedWalls/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/stitches5150/PaddedWalls/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/stitches5150/PaddedWalls/master/zips/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/tvaddonsco/tva-resolvers-repo/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/tvaddonsco/tva-resolvers-repo/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/tvaddonsco/tva-resolvers-repo/master/zips/</datadir>
+		</dir>
+		<dir>
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+        </dir>
+		<dir>
+		    <info>https://raw.githubusercontent.com/rmrector/repository.rector.stuff/master/addons.xml</info>
+		    <checksum>https://raw.githubusercontent.com/rmrector/repository.rector.stuff/master/addons.xml.md5</checksum>
+		    <datadir zip="true">https://raw.githubusercontent.com/rmrector/repository.rector.stuff/master/</datadir>
+		</dir>
+		<dir>
+            <info compressed="false">https://github.com/primaeval/repository.primaeval/raw/master/jarvis/addons.xml</info>
+            <checksum>https://github.com/primaeval/repository.primaeval/raw/master/jarvis/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.github.com/primaeval/repository.primaeval/master/jarvis/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://github.com/primaeval/repository.primaeval/raw/master/krypton/addons.xml</info>
+            <checksum>https://github.com/primaeval/repository.primaeval/raw/master/krypton/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.github.com/primaeval/repository.primaeval/master/krypton/</datadir>
+        </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>goldengun</summary>
+		<description>goldengun</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.Diamond-Wizard-Repo" name="[COLOR crimson]D[COLOR silver]iamond Wizard Repo [COLORwhite]***[/COLOR](Front-End)[COLORwhite]***[/COLOR][/COLOR]" version="3.5.6" provider-name="Team Diamond">
+<extension point="xbmc.addon.repository" name="Diamond Wizard Repo">
+<!-- Diamond Repository -->
+<info compressed="false">http://m3u.xyz/repo-files/wizard/addons.xml</info>
+<checksum>http://m3u.xyz/repo-files/wizard/addons.xml.md5</checksum>
+<datadir zip="true">http://repo.rubyjewelwizard.com/repo/diamond/wizard/zips/</datadir>
+<hashes>false</hashes>
+<dir>
+<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+<checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+<datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+</dir>
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+</dir>
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
+</dir>
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+</dir>
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+</dir>
+</extension>
+<extension point="xbmc.addon.metadata">
+<summary lang="en">Diamond Addons - Master / Main Repo</summary>
+<description lang="en">Repo For Diamond Build, Bought to you by Diamond Build</description>
+<disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+<platform>all</platform>
+</extension>
+</addon>
+
+<addon id="plugin.video.mrpiracy" name="MrPiracy" provider-name="MrPiracy" version="0.9.2">
+ <requires>
+  <import addon="xbmc.python" version="2.14.0"/>
+  <import addon="script.module.t0mm0.common" version="1.0.0"/>
+  <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+ <extension library="addon.py" point="xbmc.python.pluginsource">
+  <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+    <summary lang="en">MrPiracy</summary>
+    <description lang="en">Addon site MrPiracy</description>
+    <description lang="en">Filmes e series no Kodi. </description>
+    <disclaimer lang="en">Como desenvolvedor do addon, nada tenho a haver com site. O site pode ser acedido por um browser. Limito-me a ler o seu conteúdo disponibilizado e converter em addon.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+ </extension>
+</addon>
+
 <addon id="script.MILHANOPAIR"
   name="[B][COLORblue]MILHANO[/COLOR][/B][COLORwhite]PAIR[/COLOR]"
   version="0.0.2" 
@@ -1328,41 +1544,6 @@ The SkinBase is constantly expanding and improving. Have fun Guido and Waller. K
 	</extension>
 </addon>
 
-<addon id="plugin.video.live.kodiazor"
-       name="[COLOR orange][B]Kodiazor [COLOR orange]Team [COLOR orange]Addon[/B][/COLOR]"
-       version="1.0"
-       provider-name="[COLOR orange][B]Dj Azorean e Ricardo Pedroso[/B][/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-	<import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" optional="true" />
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />    
-     <import addon="script.module.livestreamer" optional="true"/>
-     
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  
-    
-	
-  <extension point="xbmc.addon.metadata">
-    <summary>[COLOR yellow][B]Kodiazor Team Addon, tv grátis para todos.[/B][/COLOR]</summary>
-    <description>
-        [COLOR orange][B]Kodiazor Team Addon[/B][/COLOR]
-        
-    </description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="script.module.exodus" name="Exodus Module" version="3.0.1" provider-name="Exodus">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
@@ -2028,30 +2209,6 @@ Toda a fonte  vem de utilizadores do Youtube.
     <forum></forum>
     <website></website>
   </extension>
-</addon>
-
-<addon id="plugin.video.mrpiracy" name="MrPiracy" provider-name="MrPiracy" version="0.8.9">
- <requires>
-  <import addon="xbmc.python" version="2.14.0"/>
-  <import addon="script.module.t0mm0.common" version="1.0.0"/>
-  <import addon="plugin.video.youtube" optional="true" />
-  </requires>
- <extension library="addon.py" point="xbmc.python.pluginsource">
-  <provides>video</provides>
- </extension>
- <extension point="xbmc.addon.metadata">
-    <summary lang="en">MrPiracy</summary>
-    <description lang="en">Addon site MrPiracy</description>
-    <description lang="en">Filmes e series no Kodi. </description>
-    <disclaimer lang="en">Como desenvolvedor do addon, nada tenho a haver com site. O site pode ser acedido por um browser. Limito-me a ler o seu conteÃºdo disponibilizado e converter em addon.</disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
- </extension>
 </addon>
 
 <addon id="plugin.video.now_music" name="[COLOR blue]N[/COLOR]ow [COLOR red]M[/COLOR]usic"	version="2.1.8"	provider-name="Pulse Builds">

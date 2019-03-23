@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.kongrepo" name="Kong Repo" version="2.0" provider-name="KongMedia">
+	<extension point="xbmc.addon.repository" name="KongMedia">
+		<info compressed="false">http://www.planet-universe.co.uk/addons/addons.xml</info>
+		<checksum>http://www.planet-universe.co.uk/addons/addons.xml</checksum>
+		<datadir zip="true">http://www.planet-universe.co.uk/addons/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>KongMedia Addons</summary>
+		<description>Kong Media services addons</description>
+		<platform>all</platform>
+	</extension>
+</addon>

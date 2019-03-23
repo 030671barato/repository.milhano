@@ -1,3 +1,15 @@
+v0.9.2(19/03/2019)
+- Adicionado ano 2019
+- Fix Openload
+- Fix anos com limite
+- Fix se já foi visto não remove visto do episodio/filme
+
+v0.9.1(07/09/2018)
+- Menu Favoritos, Agendados.
+
+v0.9.0(20/08/2018)
+- Correção de legendas nos filmes mais recentes.
+
 v0.8.9(24/07/2018)
 - Restruturação parcial do addon
 - Opções temporariamente desativadas: Favoritos, Agendados, Mensagens, Notificações e Trakt (só está em funcionamento o marcar e desmarcar como visto)
