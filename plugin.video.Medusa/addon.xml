@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.Medusa" version="2.0.1" name=" Medusa" provider-name="ABA">
+<addon id="plugin.video.Medusa" version="2.0.3" name=" Medusa" provider-name="ABA">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.Medusa.artwork" />
@@ -30,7 +30,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 		<website></website>
 		<source></source>
 		<assets>
-			<icon>icon.gif</icon>
+			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news></news>

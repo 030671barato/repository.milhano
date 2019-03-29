@@ -1,0 +1,23 @@
+<colors>
+    <color name="Background">99372610</color>
+    <color name="FanartFade">99765c38</color>
+    <color name="HomeBarBG">99372610</color>
+    <color name="HomeBarFG">ffededed</color>
+    <color name="HomeBarTile">3e393434</color>
+    <color name="HomeWidgetBG">99372610</color>
+    <color name="DialogBG">994b310a</color>
+    <color name="Highlight">ff2f1f06</color>
+    <color name="Highlight2">ffe2ac5a</color>
+    <color name="Selected">999F8358</color>
+    <color name="MainLabel">FFededed</color>
+    <color name="SubLabel">BFededed</color>
+    <color name="HomeMainLabel">FFededed</color>
+    <color name="HomeSubLabel">BFededed</color>
+    <color name="LineLabel">9Fededed</color>
+    <color name="SideArrow">5Fededed</color>
+    <color name="PosterBorder">3e393434</color>
+    <color name="ObjectBackground">3e393434</color>
+    <color name="ListLabel">bfededed</color>
+    <color name="Disabled">2fededed</color>
+    <color name="ListBG">bf2a2a2a</color>
+</colors>
