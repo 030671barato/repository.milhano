@@ -225,13 +225,17 @@ class Trakt(Plugin):
         return False
 
     def clear_cache(self):
+        skip_prompt = xbmcaddon.Addon().getSetting("quiet_cache")
         dialog = xbmcgui.Dialog()
-        if dialog.yesno(xbmcaddon.Addon().getAddonInfo('name'), "Clear Trakt Plugin Cache?"):
+        if skip_prompt == 'false':
+            if dialog.yesno(xbmcaddon.Addon().getAddonInfo('name'), "Clear Trakt Plugin Cache?"):
+                koding.Remove_Table("trakt_plugin")
+        else:
             koding.Remove_Table("trakt_plugin")
-
 
 @route(mode='trakt', args=["url"])
 def trakt(url):
+    pins = ""
     if url == "search":
         term = koding.Keyboard("Search For")
         url = "https://api.trakt.tv/search/movie,show,person,list?query=%s" % term
@@ -333,11 +337,13 @@ def trakt(url):
         save_to_db((xml, __builtin__.content_type), url)
 
     jenlist = JenList(xml)
-    display_list(jenlist.get_list(), __builtin__.content_type)
+    #display_list(jenlist.get_list(), jenlist.get_content_type(), pins)
+    display_list(jenlist.get_list(), __builtin__.content_type, pins)
 
 
 @route(mode='trakt_tv_show', args=["url"])
 def trakt_tv_show(trakt_id):
+    pins = ""
     __builtin__.content_type = "seasons"
     splitted = trakt_id.replace("trakt_id", "").split(",")
     trakt_id = splitted[0]
@@ -364,11 +370,12 @@ def trakt_tv_show(trakt_id):
             xml = remove_non_ascii(xml)
             save_to_db((xml, __builtin__.content_type), url)
     jenlist = JenList(xml)
-    display_list(jenlist.get_list(), __builtin__.content_type)
+    display_list(jenlist.get_list(), __builtin__.content_type, pins)
 
 
 @route(mode='trakt_season', args=["url"])
 def trakt_season(slug):
+    pins = ""
     __builtin__.content_type = "episodes"
     splitted = slug.replace("trakt_id", "").split(",")
     trakt_id = splitted[0]
@@ -397,7 +404,7 @@ def trakt_season(slug):
             xml = remove_non_ascii(xml)
             save_to_db((xml, __builtin__.content_type), url)
     jenlist = JenList(xml)
-    display_list(jenlist.get_list(), __builtin__.content_type)
+    display_list(jenlist.get_list(), __builtin__.content_type, pins)
 
 
 def get_movie_xml(item):

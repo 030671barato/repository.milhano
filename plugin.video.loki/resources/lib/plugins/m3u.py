@@ -1,6 +1,6 @@
 """
     m3u.py --- Jen Plugin for accessing m3u data
-    Copyright (C) 2018
+    Copyright (C) 2018, Mister-X
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,9 +15,6 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-    Version:
-        2018-05-14
-            Latest version to include with a Jen Release
 
     Usage Examples:
     <dir>
@@ -72,6 +69,7 @@ class M3U(Plugin):
 
 @route(mode='m3u', args=["url"])
 def m3u(url):
+    pins = ""
     xml = ""
     if not xml:
         xml = ""
@@ -88,7 +86,7 @@ def m3u(url):
                        "<thumbnail></thumbnail>"\
                        "</item>" % (name, url)
     jenlist = JenList(xml)
-    display_list(jenlist.get_list(), jenlist.get_content_type())
+    display_list(jenlist.get_list(), jenlist.get_content_type(), pins)
 
 
 def getHtml(url, referer=None, hdr=None, data=None):
