@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+
+msgctxt "#32000"
+msgid "Add To Manu"
+msgstr "הוסף לתפריט"
+
+msgctxt "#32001"
+msgid "Remove from Manu"
+msgstr "הסר מהתפריט"
+
+msgctxt "#32002"
+msgid "Remove"
+msgstr "הסר"
+
+msgctxt "#32003"
+msgid "Add"
+msgstr "הוסף"
+
+msgctxt "#32004"
+msgid "Remove Shortcut"
+msgstr "הסר קיצור"
+
+msgctxt "#32005"
+msgid "Change Icon"
+msgstr "שנה תמונה"
+
+msgctxt "#32006"
+msgid "Add"
+msgstr "הוסף קיצור"
+
+msgctxt "#32007"
+msgid "[COLOR yellow]Add To Manu[/COLOR]"
+msgstr "[COLOR yellow]הוסף לתפריט[/COLOR]"
+
+msgctxt "#32008"
+msgid "Rename"
+msgstr "שנה שם"
+
+msgctxt "#32009"
+msgid "Add Menu"
+msgstr "הוסף תפריט"
+
+msgctxt "#32010"
+msgid "New Folder"
+msgstr "תיקיה חדשה"
+
+msgctxt "#32011"
+msgid "Favourites"
+msgstr "מועדפים"
+
+msgctxt "#32012"
+msgid "Move"
+msgstr "הזז"
+
+msgctxt "#32013"
+msgid "Move to Folder"
+msgstr "הזז לתיקיה"

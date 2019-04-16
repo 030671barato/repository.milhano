@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="skin.aeonmq8" version="2.9.0" name="Aeon MQ 8" provider-name="MarcosQui">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Aeon MQ 8, improved, more light and more powerful than ever.</summary>
+		<summary lang="en_US">Aeon MQ 8, improved, more light and more powerful than ever.</summary>
+		<summary lang="pt_BR">Aeon MQ 8, melhorada, mais leve e mais poderosa do que nunca.</summary>
+		<description lang="en_GB">The traditional Aeon MQ reaches its eighth edition.[CR]Reformulated, very simple to use, with a new code that provides a lightweight and powerful skin.[CR]The Aeon MQ 8 incorporates new features such as FLEXIBLE WIDGETS 2ND GENERATION which takes the main menu's level of customization to something never seen before.[CR]Aeon MQ 8, you've never seen a skin like this.</description>
+		<description lang="en_US">The traditional Aeon MQ reaches its eighth edition.[CR]Reformulated, very simple to use, with a new code that provides a lightweight and powerful skin.[CR]The Aeon MQ 8 incorporates new features such as FLEXIBLE WIDGETS 2ND GENERATION which takes the main menu's level of customization to something never seen before.[CR]Aeon MQ 8, you've never seen a skin like this.</description>
+		<description lang="pt_BR">A tradicional Aeon MQ chega a sua oitava edição.[CR]Aeon MQ 8 conta com todos os recursos presentes na versão anterior, no entanto, esses recursos foram otimizados afim de proporcionar uma experiência ainda melhor ao usuário.[CR]Aeon MQ 8 incorpora um novo recurso chamado WIDGES FLEXÍVEIS SEGUNDA GERAÇÃO que eleva o nível de customização como você nunca viu antes.[CR]Aeon MQ 8, você nunca viu uma skin assim.</description>
+		<disclaimer lang="en_GB">Aeon MQ 8, improved, more light and more powerful than ever.</disclaimer>
+		<disclaimer lang="en_US">Aeon MQ 8, improved, more light and more powerful than ever.</disclaimer>
+		<disclaimer lang="pt_BR">Aeon MQ 8, melhorada, mais leve e mais poderosa do que nunca.</disclaimer>
+	<platform>all</platform>
+	<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+	<forum>https://forum.kodi.tv/</forum>
+	<source>https://drive.google.com/drive/folders/0BxZQqz5XxlaDZXVEcHhVTHdtSk0?usp=sharing</source>
+	<assets>
+		<icon>resources/icon.png</icon>
+		<fanart>resources/fanart.jpg</fanart>
+		<screenshot>resources/screenshot-01.jpg</screenshot>
+		<screenshot>resources/screenshot-02.jpg</screenshot>
+		<screenshot>resources/screenshot-03.jpg</screenshot>
+		<screenshot>resources/screenshot-04.jpg</screenshot>
+		<screenshot>resources/screenshot-05.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.odin"
+       name="OdinTV"
+       version="0.1"
+       provider-name="Odin TV">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.simplejson" /> 
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+	<import addon="script.module.livestreamer" optional="true"/>
+	
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+        <summary>BY TEAM MILHANO<br />  </summary>
+        <description>BY TEAM MILHANO</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.program.favoritos" version="0.1" name="[B][COLOR lightyellow]Team Milhano [COLOR lightyellow]Favoritos[/COLOR] [/B]" provider-name="Team Milhano">
+<requires>
+  <import addon="xbmc.python" version="2.20.0"/>
+  <import addon="script.module.xbmcswift2" version="2.4.0"/>
+  <import addon="script.module.requests" version="2.9.1" />
+  </requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video executable</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en"></summary>
+  <description lang="en"></description>
+  <disclaimer lang="en">.</disclaimer>
+</extension>
+</addon>
+
 <addon id="plugin.video.ZeusTV"
        name="ZEUSTV"
        version="10.2a"
@@ -330,39 +411,6 @@
     <email></email>
     <source></source>
  </extension>
-</addon>
-
-<addon id="skin.aeonmq8" version="2.8.0" name="Aeon MQ 8" provider-name="MarcosQui">
-	<requires>
-		<import addon="xbmc.gui" version="5.14.0"/>
-	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Aeon MQ 8, improved, more light and more powerful than ever.</summary>
-		<summary lang="en_US">Aeon MQ 8, improved, more light and more powerful than ever.</summary>
-		<summary lang="pt_BR">Aeon MQ 8, melhorada, mais leve e mais poderosa do que nunca.</summary>
-		<description lang="en_GB">The traditional Aeon MQ reaches its eighth edition.[CR]Reformulated, very simple to use, with a new code that provides a lightweight and powerful skin.[CR]The Aeon MQ 8 incorporates new features such as FLEXIBLE WIDGETS 2ND GENERATION which takes the main menu's level of customization to something never seen before.[CR]Aeon MQ 8, you've never seen a skin like this.</description>
-		<description lang="en_US">The traditional Aeon MQ reaches its eighth edition.[CR]Reformulated, very simple to use, with a new code that provides a lightweight and powerful skin.[CR]The Aeon MQ 8 incorporates new features such as FLEXIBLE WIDGETS 2ND GENERATION which takes the main menu's level of customization to something never seen before.[CR]Aeon MQ 8, you've never seen a skin like this.</description>
-		<description lang="pt_BR">A tradicional Aeon MQ chega a sua oitava edição.[CR]Aeon MQ 8 conta com todos os recursos presentes na versão anterior, no entanto, esses recursos foram otimizados afim de proporcionar uma experiência ainda melhor ao usuário.[CR]Aeon MQ 8 incorpora um novo recurso chamado WIDGES FLEXÍVEIS SEGUNDA GERAÇÃO que eleva o nível de customização como você nunca viu antes.[CR]Aeon MQ 8, você nunca viu uma skin assim.</description>
-		<disclaimer lang="en_GB">Aeon MQ 8, improved, more light and more powerful than ever.</disclaimer>
-		<disclaimer lang="en_US">Aeon MQ 8, improved, more light and more powerful than ever.</disclaimer>
-		<disclaimer lang="pt_BR">Aeon MQ 8, melhorada, mais leve e mais poderosa do que nunca.</disclaimer>
-	<platform>all</platform>
-	<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
-	<forum>https://forum.kodi.tv/</forum>
-	<source>https://drive.google.com/drive/folders/0BxZQqz5XxlaDZXVEcHhVTHdtSk0?usp=sharing</source>
-	<assets>
-		<icon>resources/icon.png</icon>
-		<fanart>resources/fanart.jpg</fanart>
-		<screenshot>resources/screenshot-01.jpg</screenshot>
-		<screenshot>resources/screenshot-02.jpg</screenshot>
-		<screenshot>resources/screenshot-03.jpg</screenshot>
-		<screenshot>resources/screenshot-04.jpg</screenshot>
-		<screenshot>resources/screenshot-05.jpg</screenshot>
-		</assets>
-	</extension>
 </addon>
 
 <addon id="skin.embuary-leia" version="18.5.6a" name="Embuary (Leia)" provider-name="sualfred">
@@ -2280,39 +2328,6 @@ Changes to default settings.
     <platform>all</platform>
   </extension>
 </addon>
-
-<addon id="plugin.video.aceboxtv"
-       name="AceBoxTV"
-       version="3.0"
-       provider-name="MikeAngel">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver"/>
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-	<import addon="script.module.livestreamer" optional="true"/>
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-        <summary>Mike Angel! Este addon Ã© uma modificaÃ§Ã£o do original...<br />  </summary>
-        <description>Listas de TV do Google ...</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 
 <addon id="plugin.video.Anima.PT"
        name="Anima.PT"

@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+
+msgctxt "#32000"
+msgid "Adicionar"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Remova o menu"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Excluir"
+msgstr ""
+
+msgctxt "#32003"
+msgid "Adicionar"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Excluir Atalho"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Alterar ícone"
+msgstr ""
+
+msgctxt "#32006"
+msgid "Adicionar"
+msgstr ""
+
+msgctxt "#32007"
+msgid "[COLOR lime]Adicionar[/COLOR]"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Renomear"
+msgstr ""
+
+msgctxt "#32009"
+msgid "Menü Adicionar"
+msgstr ""
+
+msgctxt "#32010"
+msgid "Novas pastas"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Favoritos"
+msgstr ""
+
+msgctxt "#32012"
+msgid "Mudança"
+msgstr ""
+
+msgctxt "#32013"
+msgid "Mover pasta"
+msgstr ""
