@@ -47,39 +47,6 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.theredqueen" name="The Red Queen" version="3.0" provider-name="ja5on">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.universalscrapers" version="1.0.0" />
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.beautifulsoup" version="3.2.1" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.addon.common" version="2.0.0" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-		<import addon="script.module.trq-livenet" />
-		<import addon="script.module.trq-swiftstreamz" />
-		<import addon="script.module.trq-tvtap" />
-        <import addon="script.module.dateutil" />
-		<import addon="script.module.feedparser" version="5.1.3"/>
-        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.resolveurl" />
-        <!--<import addon="script.module.urlresolver" />-->
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">The Red Queen</summary>
-        <description lang="en">The Red Queen Add-on from The Umbrella Corporation Repository.</description>
-        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-        <platform>all</platform>
-        <website/>
-        <video_guide>https://youtu.be/0kFhoWahtFw</video_guide>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-    </extension>
-</addon>
-
 <addon id="plugin.video.netfreeplay"
        name="netfreeplay"
        version="1.0"
@@ -694,56 +661,6 @@
     </extension>
 </addon>
 
-<addon id="script.Medusa.metadata" version="2.0.0" name="Medusa Metadata" provider-name="ABA">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Metadata for the Medusa Addon</summary>
-		<description>Metadata for Medusa are maintained externally for ease and a faster expierience.</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="plugin.video.Medusa" version="2.0.3" name=" Medusa" provider-name="ABA">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.Medusa.artwork" />
-		<import addon="script.Medusa.metadata" />
-                <import addon="script.module.resolveurl"/>
-                <import addon="script.module.metahandler"/>
-                <import addon="script.module.requests"/>
-                <import addon="script.module.beautifulsoup"/>
-                <import addon="script.module.schism.common"/>
-                <import addon="script.module.futures"/>
-        		<import addon="script.module.universalscrapers" version="1.0.0" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="Medusa.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Medusa</summary>
-		<description lang="en">Movie, TV Show, and Playlist Add-on</description>
-        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
-The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
-This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.
-</disclaimer>
-		<platform>all</platform>
-		<license>Beerware rev. 42</license>
-		<platform>all</platform>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-		<news></news>
-	</extension>
-</addon>
-
 <addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.2" provider-name="Bugatsinho">
     <extension point="xbmc.addon.repository" name="Bugatsinho repository">
         <info compressed="false">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml</info>
@@ -800,23 +717,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
 - add alternatives domains and language support
       (https://github.com/bugatsinho/bugatsinho.github.io/pull/15)</news>
   </extension>
-</addon>
-
-<addon id="script.Medusa.artwork" version="2.0.0" name="Medusa Artwork" provider-name="ABA">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Themes for the Medusa Addon</summary>
-		<description>Themes for Medusa are maintained separately to make distribution of the the addon itself easier/faster.</description>
-        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
-The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
-This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.
-</disclaimer>
-		<platform>all</platform>
-		<license>Beerware rev. 42</license>
-	</extension>
 </addon>
 
 <addon id="repo.flechanegra" name="[B][COLOR red]Flecha Negra [COLOR red]Repositorio[/B][/COLOR]" version="1.1" provider-name="Flecha Negra">
