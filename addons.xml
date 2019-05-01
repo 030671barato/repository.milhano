@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="repository.milhano" name="milhano.Repositório" version="1.3" provider-name="milhano.repo">
+	<extension point="xbmc.addon.repository" name="milhano Repository">
+		<info compressed="false">http://raw.github.com/Milhano/repository.milhano/master/addons.xml</info>
+		<checksum>http://raw.github.com/Milhano/repository.milhano/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/Milhano/repository.milhano/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>milhano Repositório</summary>
+		<description>repo Team Milhano</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.3" provider-name="Bugatsinho">
+    <extension point="xbmc.addon.repository" name="Bugatsinho repository">
+        <info compressed="false">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/_zips</datadir>
+        <hashes>false</hashes>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+            <hashes>false</hashes>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Bugatsinho repository</summary>
+        <description>This repository contains Greek, Spanish and other addons!Read first each addon's description!</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.sport365.live" name="Sport365" version="2.5.3" provider-name="Bugatsinho">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="2.19.1"/>
+        <import addon="plugin.video.f4mTester" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Sport365 originally made by GalAnonim</summary>
+    <description lang="en">Fork version 1.0 by GalAnonim!Kindly note that Sport365 Live is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+    <disclaimer lang="en">Sport365 Live does not provide any streams of its own. Stream quality, content and copyright are responsibility of the ad-financed source web site.</disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <website>https://bugatsinho.github.io</website>
+    <twitter>@bugatsinho</twitter>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.png</fanart>
+  </assets>
+  <news>2.5.3 27-04-2019
+- Remove Alt Domains that dont work
+- Fix banners issue</news>
+  </extension>
+</addon>
+
 <addon id="repository.umbrellacorp" name="Umbrella Corporation Repository" version="1.3" provider-name="Ja50n">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -661,64 +733,6 @@
     </extension>
 </addon>
 
-<addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.2" provider-name="Bugatsinho">
-    <extension point="xbmc.addon.repository" name="Bugatsinho repository">
-        <info compressed="false">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/_zips</datadir>
-        <hashes>false</hashes>
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/addons.xml</info>
-            <checksum>http://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/addons.xml.md5</checksum>
-            <datadir zip="true">http://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/zips/</datadir>
-        </dir>
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-        </dir>
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Bugatsinho repository</summary>
-        <description>This repository contains Greek, Spanish and other addons!Read first each addon's description!</description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon id="plugin.video.sport365.live" name="Sport365" version="2.5.2" provider-name="Bugatsinho">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.requests" version="2.19.1"/>
-        <import addon="plugin.video.f4mTester" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
-    </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Sport365 originally made by GalAnonim</summary>
-    <description lang="en">Fork version 1.0 by GalAnonim!Kindly note that Sport365 Live is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
-    <disclaimer lang="en">Sport365 Live does not provide any streams of its own. Stream quality, content and copyright are responsibility of the ad-financed source web site.</disclaimer>
-    <language>en</language>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <website>https://bugatsinho.github.io</website>
-    <twitter>@bugatsinho</twitter>
-  <assets>
-    <icon>icon.png</icon>
-    <fanart>fanart.png</fanart>
-  </assets>
-  <news>2.5.2 23-03-2019
-- add inputstream option for playback(settings)
-- add alternatives domains and language support
-      (https://github.com/bugatsinho/bugatsinho.github.io/pull/15)</news>
-  </extension>
-</addon>
-
 <addon id="repo.flechanegra" name="[B][COLOR red]Flecha Negra [COLOR red]Repositorio[/B][/COLOR]" version="1.1" provider-name="Flecha Negra">
 	<requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -793,20 +807,6 @@
     <description lang="en">add-on Divino</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="repository.milhano" name="milhano.Repositório" version="1.1" provider-name="milhano.repo">
-	<extension point="xbmc.addon.repository" name="milhano Repository">
-		<info compressed="false">http://raw.github.com/Milhano/repository.milhano/master/addons.xml</info>
-		<checksum>http://raw.github.com/Milhano/repository.milhano/master/addons.xml.md5</checksum>
-		<datadir zip="true">http://raw.github.com/Milhano/repository.milhano/master/repo/</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>milhano Repositório</summary>
-		<description>repo Team Milhano</description>
-		<disclaimer></disclaimer>
-		<platform>all</platform>
-	</extension>
 </addon>
 
 <addon id="repository.uk1" name="uk1" version="1.0.4" provider-name="we try">
