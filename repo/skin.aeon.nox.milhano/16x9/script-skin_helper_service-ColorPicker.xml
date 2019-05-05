@@ -15,6 +15,7 @@
 				<height>100</height>
 				<font>font35_title</font>
 				<label>$ADDON[script.skin.helper.colorpicker 32011]</label>
+				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="button" id="3030">
@@ -36,6 +37,7 @@
 					<width>130</width>
 					<height>60</height>
 					<label>$ADDON[script.skin.helper.colorpicker 32049]:</label>
+					<textcolor>white</textcolor>
 				</control>
 				<control type="slider" id="3015">
 					<left>130</left>
@@ -52,6 +54,7 @@
 					<left>380</left>
 					<height>60</height>
 					<label>$INFO[Control.Getlabel(3015)]</label>
+					<textcolor>white</textcolor>
 				</control>
 			</control>
 			<control type="panel" id="3110">
@@ -60,6 +63,7 @@
 				<left>60</left>
 				<width>1798</width>
 				<height>765</height>
+				<orientation>vertical</orientation>
 				<onleft>3110</onleft>
 				<onright>3110</onright>
 				<onup>3030</onup>

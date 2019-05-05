@@ -17,6 +17,15 @@
 			<left>100</left>
 			<top>-40</top>
 			<control type="image">
+				<description>background image</description>
+				<left>-32</left>
+				<top>1020</top>
+				<width>1204</width>
+				<height>904</height>
+				<texture border="40">panel_reflect.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
 				<left>-32</left>
 				<top>148</top>
 				<width>1204</width>
@@ -37,6 +46,12 @@
 				<scrolltime tween="quadratic">200</scrolltime>
 				<itemlayout height="120" width="1140">
 					<control type="image">
+						<top>62</top>
+						<width>1140</width>
+						<height>60</height>
+						<texture border="1">separator2.png</texture>
+					</control>
+					<control type="image">
 						<left>15</left>
 						<top>8</top>
 						<width>105</width>
@@ -51,6 +66,7 @@
 						<width>950</width>
 						<height>70</height>
 						<font>font60</font>
+						<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEqual(ListItem.Label,$LOCALIZE[19140])</visible>
 					</control>
@@ -60,6 +76,7 @@
 						<height>70</height>
 						<font>font30</font>
 						<textcolor>grey2</textcolor>
+						<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!String.IsEqual(ListItem.Label,$LOCALIZE[19140])</visible>
 					</control>
@@ -70,6 +87,7 @@
 						<height>60</height>
 						<font>font15</font>
 						<textcolor>grey3</textcolor>
+						<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 						<label>$INFO[ListItem.Plot]</label>
 					</control>
 					<control type="label">
@@ -79,6 +97,7 @@
 						<font>font15</font>
 						<align>right</align>
 						<textcolor>grey3</textcolor>
+						<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 						<label>$INFO[ListItem.Label2][CR]$INFO[ListItem.StartTime]</label>
 					</control>
 					<control type="group">
@@ -92,6 +111,7 @@
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey2</textcolor>
 							<align>right</align>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label></label>
 							<visible>ListItem.HasTimer</visible>
 						</control>
@@ -103,12 +123,19 @@
 							<textoffsetx>15</textoffsetx>
 							<textcolor>red</textcolor>
 							<align>right</align>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label></label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="1140">
+					<control type="image">
+						<top>62</top>
+						<width>1140</width>
+						<height>60</height>
+						<texture border="1">separator2.png</texture>
+					</control>
 					<control type="image">
 						<width>1140</width>
 						<height>120</height>
@@ -130,6 +157,7 @@
 						<width>950</width>
 						<height>70</height>
 						<font>font60</font>
+						<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEqual(ListItem.Label,Search...)</visible>
 					</control>
@@ -138,6 +166,7 @@
 						<width>950</width>
 						<height>70</height>
 						<font>font30</font>
+						<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!String.IsEqual(ListItem.Label,Search...)</visible>
 					</control>
@@ -147,6 +176,7 @@
 						<width>950</width>
 						<height>60</height>
 						<font>font15</font>
+						<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 						<label>$INFO[ListItem.Plot]</label>
 					</control>
 					<control type="label">
@@ -155,6 +185,7 @@
 						<height>120</height>
 						<font>font15</font>
 						<align>right</align>
+						<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 						<label>$INFO[ListItem.Label2][CR]$INFO[ListItem.StartTime]</label>
 					</control>
 					<control type="group">
@@ -167,6 +198,7 @@
 							<font>IconTiny</font>
 							<textoffsetx>15</textoffsetx>
 							<align>right</align>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label></label>
 							<visible>ListItem.HasTimer</visible>
 						</control>
@@ -178,6 +210,7 @@
 							<textoffsetx>15</textoffsetx>
 							<textcolor>red</textcolor>
 							<align>right</align>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label></label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -193,9 +226,10 @@
 				<onright>SetProperty(MediaMenu,True,Home)</onright>
 				<onright>SetFocus(9050)</onright>
 				<texturesliderbackground />
-				<texturesliderbar colordiffuse="80FFFFFF" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+				<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 				<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
 			</control>
 			<control type="group">
 				<left>1196</left>

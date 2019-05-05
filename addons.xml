@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="service.subtitles.opensubtitles.free" name="OpenSubtitles Free" provider-name="amet and Flecha" version="0.0.2">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension library="service.py" point="xbmc.subtitle.module"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Retrieved from version 5.0.16 OpenSubtitles.</summary>
+	<summary lang="pt">Retirado da versao 5.0.16 OpenSubtitles.</summary>
+    <description lang="en">Search and download subtitles on opensubtitles.org without resistance.</description>
+	<description lang="pt">Pesquise e baixe legendas em opensubtitles.org sem resisto.</description>
+    <disclaimer lang="en"/>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website/>
+    <email/>
+    <source></source>    
+  </extension>
+</addon>
+
+<addon id="skin.aeon.nox.milhano" version="6.0.15" name="Aeon Nox: Milhano" provider-name="Milhano">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0"/>
+		<import addon="script.grab.fanart" version="0.12.8"/>
+		<import addon="script.skinshortcuts" version="1.0.10"/>
+		<import addon="service.library.data.provider" version="0.0.7"/>
+		<import addon="resource.images.studios.white" version="0.0.1"/>
+		<import addon="resource.images.recordlabels.white" version="0.0.1"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.75">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="pt_BR">Created by BigNoid, Modded by Milhano, and Widgets by Mr. V</summary>
+		<summary lang="pt_PT">Criado por BigNoid, Modded por Milhano, e Widgets por Mr. V</summary>
+		<description lang="pt_BR">Design completamente novo para criar um look moderno, mantendo o feeling do Aeon Clássico.</description>
+		<description lang="pt_PT">Completamente redesenhado para criar um visual moderno enquanto retém o toque clássico Aeon.</description>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=210069</forum>
+		<website>https://github.com/mikeMilhano164/Aeon-Nox-Milhano</website>
+		<source>https://github.com/mikeMilhano164/Aeon-Nox-Milhano</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-10.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-11.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-12.jpg</screenshot>
+		</assets>
+		<news>[I][COLOR FFFF9800]v6.1.8[/COLOR][/I][CR]- Some design changes throughout the skin[CR]- Add support for Rotten Tomatoes and Metacritic ratings from Universal Movie Scraper[CR]- Add option to move Main Menu system bar to top[CR]- Update view scollbars[CR]- Fix remaining time issues[CR]- Add option to show clearart in Video Info screen for TV Shows[CR]- DialogMusicInfo fixes[CR]- Update radio button images from Estuary[CR]- Fix auto fullscreen music for partymode[CR]- Add separate Fixed\Wrap settings for each supported viewtype and remove global horizontal navigation style from Skin settings[CR]- Fix unnecessary "Minutes" added to end of movie set genres in MyFlix[CR][CR][B]All updates may contain various changes and/or improvements[/B][CR]For a more complete list visit:[CR][I][COLOR FFFF9800]https://github.com/mikeMilhano164/Aeon-Nox-Milhano/commits/master[/COLOR][/I][CR][CR][I][COLOR FFFF9800]v6.1.7[/COLOR][/I][CR]- GUI bump 5.14.0[CR]- Add settings to Skin Helper Service in Skin settings > Help > Supported add-ons[CR]- Fix Season posters in DialogVideoInfo[CR]- Add Landscape and Wall views for sets[CR]- *Change low menu position to skin default*[CR]- Misc PVR updates and changes[CR]- Add Fullscreen info for add-ons and recordings[CR]- Fix square posters for list Widgets[CR]- Auto hide unwatched episode thumbs when disabled in System > Media > Videos > Show information for unwatched items</news>
+	</extension>
+</addon>
+
 <addon id="repository.milhano" name="milhano.Repositório" version="1.3" provider-name="milhano.repo">
 	<extension point="xbmc.addon.repository" name="milhano Repository">
 		<info compressed="false">http://raw.github.com/Milhano/repository.milhano/master/addons.xml</info>
@@ -731,51 +796,6 @@
     </assets>
     <news></news>
     </extension>
-</addon>
-
-<addon id="repo.flechanegra" name="[B][COLOR red]Flecha Negra [COLOR red]Repositorio[/B][/COLOR]" version="1.1" provider-name="Flecha Negra">
-	<requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-		<import addon="xbmc.addon" version="12.0.0"/>
-        <import addon="script.module.simple.downloader" version="0.9.4"/>
-        <import addon="script.module.t0mm0.common" version="2.0.0"/>
-        <import addon="script.module.beautifulsoup4" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.httplib2" />
-        <import addon="script.module.simple.downloader" version="0.9.4"/>
-        <import addon="plugin.video.youtube" version="5.2.1" />
-        <import addon="script.module.urlresolver" />
-        <import addon="script.module.simplejson" />    
-        <import addon="script.module.livestreamer"/>
-        <import addon="script.module.pyamf"/>
-        <import addon="script.common.plugin.cache" version="2.5.2"/>
-        <import addon="script.module.metahandler" version="2.5.1"/>
-	    <import addon="script.module.addon.common" />
-	    <import addon="script.module.addon.signals" version="0.0.1"/>
-	    <import addon="script.module.youtube.dl" optional="true"/>	
-	</requires>
-	<extension point="xbmc.addon.repository" name="[B][COLOR red]Flecha Negra [COLOR red]Repositorio[/B][/COLOR]">
-		    <info compressed="false">https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master/addons.xml</info>
-		    <checksum>https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master/addons.xml.md5</checksum>
-		    <datadir zip="true">https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master</datadir>
-		<dir minversion="17.0.0">
-		    <info compressed="true">https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master/krypton/addons.xml</info>
-		    <checksum>https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master/krypton/addons.xml.md5</checksum>
-		    <datadir zip="true">https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master/krypton</datadir>
-		</dir>
-		<dir minversion="18.1.0">
-		    <info compressed="true">https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master/leia/addons.xml</info>
-		    <checksum>https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master/leia/addons.xml.md5</checksum>
-		    <datadir zip="true">https://raw.githubusercontent.com/FLECHANEGRAPEDROSO/repo.flechanegra/master/leia</datadir>
-		</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Repositorio Flecha Negra</summary>
-		<description>Repositorio oficial Flecha Negra - Proibido reproducao sem previa autorizacao</description>
-		<disclaimer></disclaimer>
-		<platform>all</platform>
-		<news>[I]v1.1[/I][CR]- Suporte para uma Skin!</news>
-	</extension>
 </addon>
 
 <addon id="plugin.video.divino"
@@ -1950,47 +1970,6 @@ The SkinBase is constantly expanding and improving. Have fun Guido and Waller. K
 	</extension>
 </addon>
 
-<addon id="skin.aeon.nox.milhano" version="0.0.100" name="Aeon Nox: Milhano" provider-name="Milhano Milhano: Leia">
-	<requires>
-		<import addon="script.skinshortcuts" version="1.0.10" />
-		<import addon="service.library.data.provider" version="0.0.7" />
-		<import addon="script.grab.fanart" version="0.12.8" />
-		<import addon="resource.images.studios.white" version="0.0.1" />
-		<import addon="resource.images.recordlabels.white" version="0.0.1" />
-	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="pt_BR">Created by BigNoid, Modded by Milhano, and Widgets by Mr. V</summary>
-		<summary lang="pt_PT">Criado por BigNoid, Modded por Milhano, e Widgets por Mr. V</summary>
-		<description lang="pt_BR">Design completamente novo para criar um look moderno, mantendo o feeling do Aeon Clássico.</description>
-		<description lang="pt_PT">Completamente redesenhado para criar um visual moderno enquanto retém o toque clássico Aeon.</description>
-		<platform>all</platform>
-		<license>CC BY-NC-SA 4.0</license>
-		<forum>http://forum.kodi.tv/showthread.php?tid=210069</forum>
-		<website>https://github.com/mikeMilhano164/Aeon-Nox-Milhano</website>
-		<source>https://github.com/mikeMilhano164/Aeon-Nox-Milhano</source>
-		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-08.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-09.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-10.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-11.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-12.jpg</screenshot>
-		</assets>
-		<news>[I][COLOR FFFF9800]v6.1.8[/COLOR][/I][CR]- Some design changes throughout the skin[CR]- Add support for Rotten Tomatoes and Metacritic ratings from Universal Movie Scraper[CR]- Add option to move Main Menu system bar to top[CR]- Update view scollbars[CR]- Fix remaining time issues[CR]- Add option to show clearart in Video Info screen for TV Shows[CR]- DialogMusicInfo fixes[CR]- Update radio button images from Estuary[CR]- Fix auto fullscreen music for partymode[CR]- Add separate Fixed\Wrap settings for each supported viewtype and remove global horizontal navigation style from Skin settings[CR]- Fix unnecessary "Minutes" added to end of movie set genres in MyFlix[CR][CR][B]All updates may contain various changes and/or improvements[/B][CR]For a more complete list visit:[CR][I][COLOR FFFF9800]https://github.com/mikeMilhano164/Aeon-Nox-Milhano/commits/master[/COLOR][/I][CR][CR][I][COLOR FFFF9800]v6.1.7[/COLOR][/I][CR]- GUI bump 5.14.0[CR]- Add settings to Skin Helper Service in Skin settings > Help > Supported add-ons[CR]- Fix Season posters in DialogVideoInfo[CR]- Add Landscape and Wall views for sets[CR]- *Change low menu position to skin default*[CR]- Misc PVR updates and changes[CR]- Add Fullscreen info for add-ons and recordings[CR]- Fix square posters for list Widgets[CR]- Auto hide unwatched episode thumbs when disabled in System > Media > Videos > Show information for unwatched items</news>
-	</extension>
-</addon>
-
 <addon id="script.milhanomanutencao" name="Milhano Manutencao+" version="2019.02.05" provider-name="Milhano">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -2427,29 +2406,6 @@ Changes to default settings.
   <extension point="xbmc.addon.metadata">
     <summary lang="en">[COLOR aqua]Elektra Vault Addon[/COLOR]</summary>
     <description lang="en">[COLOR aqua]Live Sport Links Can Go Up And Down//I do Not Host Any Files,These Are Freely Avaliable On Net[/COLOR]</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.flechanegra" name="[COLOR red]FlechaNegra[/COLOR]" version="0.1" provider-name="Ike">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4"/>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.httplib2"/>
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube"/>
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLORorange][B]Flecha Negra Ã© um addon da familia Kodiazor Team.TODOS OS LINKS ESTÃƒO DISPONIVEIS NA INTERNET![/COLOR][/B]</summary>
-    <description lang="en">[COLORorange][B]Flecha Negra Ã© um addon da familia Kodiazor Team.TODOS OS LINKS ESTÃƒO DISPONIVEIS NA INTERNET![/COLOR][/B]</description>
     <platform>all</platform>
   </extension>
 </addon>

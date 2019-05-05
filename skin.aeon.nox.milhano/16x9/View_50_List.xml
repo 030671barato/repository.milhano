@@ -11,6 +11,15 @@
 				<left>100</left>
 				<top>-40</top>
 				<control type="image">
+					<description>background image</description>
+					<left>-32</left>
+					<top>1020</top>
+					<width>1204</width>
+					<height>904</height>
+					<texture border="40">panel_reflect.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
 					<left>-32</left>
 					<top>148</top>
 					<width>1204</width>
@@ -31,7 +40,13 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>95060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
-					<itemlayout height="120" width="1140" condition="Container.Content(movies) | Container.Content(studios)">
+					<itemlayout height="120" width="1140" condition="Container.Content(movies)">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<left>15</left>
 							<top>7.5</top>
@@ -48,6 +63,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 						</control>
@@ -58,6 +74,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="image">
@@ -69,7 +86,6 @@
 							<texture>$VAR[UnFocusHDIndicator]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating) | String.IsEqual(ListItem.Label2,ListItem.Year)</visible>
-							<visible>Skin.HasSetting(noindicatorlist)</visible>
 						</control>
 						<control type="label">
 							<width>1060</width>
@@ -77,6 +93,7 @@
 							<font>font30</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Rating]</label>
 							<visible>[String.IsEqual(ListItem.Label2,ListItem.Rating) + !Skin.HasSetting(Enable.HideRatings)] | String.IsEqual(Container.SortMethod,$LOCALIZE[563])</visible>
 							<visible>!ListItem.IsCollection</visible>
@@ -88,6 +105,7 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabelVar]</label>
 							<visible>[!String.IsEqual(ListItem.Label2,ListItem.Rating) | Skin.HasSetting(Enable.HideRatings)] + !String.IsEqual(Container.SortMethod,$LOCALIZE[563])</visible>
 							<visible>!ListItem.IsCollection</visible>
@@ -101,7 +119,13 @@
 							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
 						</control>
 					</itemlayout>
-					<focusedlayout height="120" width="1140" condition="Container.Content(movies) | Container.Content(studios)">
+					<focusedlayout height="120" width="1140" condition="Container.Content(movies)">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -123,6 +147,8 @@
 							<width>790</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 						</control>
@@ -132,6 +158,8 @@
 							<width>790</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="image">
@@ -142,13 +170,14 @@
 							<aspectratio>keep</aspectratio>
 							<texture>$VAR[UnFocusHDIndicator]</texture>
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating) | String.IsEqual(ListItem.Label2,ListItem.Year)</visible>
-							<visible>Skin.HasSetting(noindicatorlist)</visible>
 						</control>
 						<control type="label">
 							<width>1060</width>
 							<height>116</height>
 							<font>font30</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Rating]</label>
 							<visible>[String.IsEqual(ListItem.Label2,ListItem.Rating) + !Skin.HasSetting(Enable.HideRatings)] | String.IsEqual(Container.SortMethod,$LOCALIZE[563])</visible>
 							<visible>!ListItem.IsCollection</visible>
@@ -159,6 +188,8 @@
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabelVar]</label>
 							<visible>[!String.IsEqual(ListItem.Label2,ListItem.Rating) | Skin.HasSetting(Enable.HideRatings)] + !String.IsEqual(Container.SortMethod,$LOCALIZE[563])</visible>
 							<visible>!ListItem.IsCollection</visible>
@@ -174,6 +205,12 @@
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(episodes)">
 						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
@@ -198,6 +235,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Premiered)">Conditional</animation>
 						</control>
@@ -208,6 +246,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="image">
@@ -219,7 +258,6 @@
 							<texture>$VAR[UnFocusHDIndicator]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
-							<visible>Skin.HasSetting(noindicatorlist)</visible>
 						</control>
 						<control type="label">
 							<width>1060</width>
@@ -227,6 +265,7 @@
 							<font>font30</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
 						</control>
@@ -237,6 +276,7 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>!String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
 						</control>
@@ -250,6 +290,12 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="Container.Content(episodes)">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -280,6 +326,8 @@
 							<width>790</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Premiered)">Conditional</animation>
 						</control>
@@ -289,6 +337,8 @@
 							<width>790</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="image">
@@ -299,13 +349,14 @@
 							<aspectratio>keep</aspectratio>
 							<texture>$VAR[UnFocusHDIndicator]</texture>
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
-							<visible>Skin.HasSetting(noindicatorlist)</visible>
 						</control>
 						<control type="label">
 							<width>1060</width>
 							<height>116</height>
 							<font>font30</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
 						</control>
@@ -315,6 +366,8 @@
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>!String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
 						</control>
@@ -328,6 +381,12 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(tvshows)">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -343,6 +402,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 						</control>
@@ -353,6 +413,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="label">
@@ -361,6 +422,7 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="image">
@@ -372,12 +434,13 @@
 							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
 						</control>
 						<control type="group">
+							<description>Unwatched episodes</description>
 							<left>1076</left>
 							<control type="image">
 								<top>28</top>
 								<width>64</width>
 								<height>64</height>
-								<texture colordiffuse="$VAR[ThemeLabelColor]">overlays/list/OverlayUnWatched.png</texture>
+								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
@@ -395,6 +458,12 @@
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="Container.Content(tvshows)">
 						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<width>1140</width>
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
@@ -414,6 +483,8 @@
 							<width>790</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 						</control>
@@ -423,6 +494,8 @@
 							<width>790</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="label">
@@ -430,6 +503,8 @@
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="image">
@@ -441,12 +516,13 @@
 							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
 						</control>
 						<control type="group">
+							<description>Unwatched episodes</description>
 							<left>1076</left>
 							<control type="image">
 								<top>28</top>
 								<width>64</width>
 								<height>64</height>
-								<texture colordiffuse="$VAR[ThemeLabelColor]">overlays/list/OverlayUnWatched.png</texture>
+								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
@@ -456,12 +532,19 @@
 								<font>font12_title</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
+								<textcolor>white</textcolor>
 								<textoffsetx>18</textoffsetx>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(seasons)">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -487,6 +570,7 @@
 							<height>120</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -495,6 +579,7 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 						</control>
 						<control type="image">
@@ -506,12 +591,13 @@
 							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
 						</control>
 						<control type="group">
+							<description>Unwatched episodes</description>
 							<left>1076</left>
 							<control type="image">
 								<top>28</top>
 								<width>64</width>
 								<height>64</height>
-								<texture colordiffuse="$VAR[ThemeLabelColor]">overlays/list/OverlayUnWatched.png</texture>
+								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
@@ -529,6 +615,12 @@
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="Container.Content(seasons)">
 						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<width>1140</width>
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
@@ -558,6 +650,8 @@
 							<width>960</width>
 							<height>120</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -565,6 +659,8 @@
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 						</control>
 						<control type="image">
@@ -576,12 +672,13 @@
 							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
 						</control>
 						<control type="group">
+							<description>Unwatched episodes</description>
 							<left>1076</left>
 							<control type="image">
 								<top>28</top>
 								<width>64</width>
 								<height>64</height>
-								<texture colordiffuse="$VAR[ThemeLabelColor]">overlays/list/OverlayUnWatched.png</texture>
+								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
@@ -591,6 +688,7 @@
 								<font>font12_title</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
+								<textcolor>white</textcolor>
 								<textoffsetx>18</textoffsetx>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
@@ -598,6 +696,12 @@
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(addons)">
 						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
@@ -622,6 +726,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -632,6 +737,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -641,11 +747,18 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="Container.Content(addons)">
 						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<width>1140</width>
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
@@ -675,6 +788,8 @@
 							<width>905</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -684,6 +799,8 @@
 							<width>905</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -692,16 +809,25 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(videos)">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="label">
 							<left>30</left>
 							<width>1040</width>
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -711,6 +837,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Studio]</label>
 						</control>
 						<control type="label">
@@ -720,6 +847,7 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabelVar]</label>
 						</control>
 						<control type="image">
@@ -728,10 +856,16 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
+							<texture>$VAR[ListItem.Overlay]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="Container.Content(videos)">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -744,6 +878,8 @@
 							<width>1040</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -752,6 +888,7 @@
 							<width>1040</width>
 							<height>60</height>
 							<font>font15</font>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Studio]</label>
 						</control>
 						<control type="label">
@@ -760,6 +897,8 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabelVar]</label>
 						</control>
 						<control type="image">
@@ -768,10 +907,16 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
+							<texture>$VAR[ListItem.Overlay]</texture>
 						</control>
 					</focusedlayout>
-					<itemlayout height="120" width="1140" condition="![Container.Content(movies) | Container.Content(studios) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(addons) | Container.Content(seasons) | Container.Content(videos)]">
+					<itemlayout height="120" width="1140" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(addons) | Container.Content(seasons) | Container.Content(videos)]">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -815,6 +960,7 @@
 							<height>120</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -824,6 +970,7 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabelVar]</label>
 						</control>
 						<control type="image">
@@ -835,7 +982,13 @@
 							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
 						</control>
 					</itemlayout>
-					<focusedlayout height="120" width="1140" condition="![Container.Content(movies) | Container.Content(studios) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(addons) | Container.Content(seasons) | Container.Content(videos)]">
+					<focusedlayout height="120" width="1140" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(addons) | Container.Content(seasons) | Container.Content(videos)]">
+						<control type="image">
+							<top>62</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -884,6 +1037,8 @@
 							<width>960</width>
 							<height>120</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -892,6 +1047,8 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[VideoListLabelVar]</label>
 						</control>
 						<control type="image">
@@ -905,9 +1062,9 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="95060">
-					<left>1142</left>
+					<left>1140</left>
 					<top>180</top>
-					<width>12</width>
+					<width>14</width>
 					<height>840</height>
 					<onup>95060</onup>
 					<ondown>95060</ondown>
@@ -917,10 +1074,11 @@
 					<onright condition="Control.IsVisible(95061) + !Control.IsVisible(8000)">95061</onright>
 					<onright condition="!Control.IsVisible(95061) + !Control.IsVisible(8000)">4400</onright>
 					<onright condition="Control.IsVisible(8000)">8000</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">
@@ -1000,6 +1158,14 @@
 				<visible>![Container.Content(movies) | Container.Content(genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content() | Container.Content(files) | Container.Content(addons)]</visible>
 				<include>VisibleFadeAnimation</include>
 				<control type="image">
+					<description>background image</description>
+					<top>1020</top>
+					<width>570</width>
+					<height>904</height>
+					<texture border="40">panel_reflect.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
 					<top>148</top>
 					<width>570</width>
 					<height>904</height>
@@ -1010,7 +1176,7 @@
 					<width>570</width>
 					<height>348</height>
 					<aspectratio>scale</aspectratio>
-					<texture background="true">$VAR[NoSpoilerIconVar]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordersize>32</bordersize>
 					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
@@ -1075,37 +1241,40 @@
 					<left>47</left>
 					<width>476</width>
 					<height>460</height>
+					<font>font15_textbox</font>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(95061)</autoscroll>
 					<include>DefaultButtonsValues</include>
 					<pagecontrol>95061</pagecontrol>
 					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 				</control>
 				<control type="scrollbar" id="95061">
-					<left>540</left>
+					<left>538</left>
 					<top>560</top>
-					<width>12</width>
+					<width>14</width>
 					<height>460</height>
 					<onup>PageUp(70)</onup>
 					<ondown>PageUp(70)</ondown>
 					<onleft>50</onleft>
 					<onright>4400</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 				</control>
 				<control type="scrollbar" id="95063">
-					<left>540</left>
+					<left>538</left>
 					<top>180</top>
-					<width>12</width>
+					<width>14</width>
 					<height>840</height>
 					<onleft>8000</onleft>
 					<onright>4400</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 					<visible>![Container.Content(episodes) | Container.Content(videos)]</visible>
 				</control>
 				<control type="panel" id="8000">
@@ -1118,15 +1287,22 @@
 					<onright condition="!Control.IsVisible(95063)">4400</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>95063</pagecontrol>
+					<orientation>vertical</orientation>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<visible>![Container.Content(episodes) | Container.Content(videos)]</visible>
 					<animation effect="fade" start="100" end="0" time="150" condition="Container(8000).IsUpdating">Conditional</animation>
 					<itemlayout height="60" width="506">
+						<control type="image">
+							<width>506</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="label">
 							<width>506</width>
 							<height>60</height>
 							<font>font14</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -1136,6 +1312,7 @@
 							<font>font14</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Year]</label>
 						</control>
@@ -1150,6 +1327,7 @@
 							<width>506</width>
 							<height>60</height>
 							<font>font14</font>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -1158,6 +1336,7 @@
 							<height>60</height>
 							<font>font14</font>
 							<align>right</align>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Year]</label>
 						</control>
@@ -1165,25 +1344,26 @@
 					<content target="videos" sortby="$VAR[ListSortByVar]" sortorder="ascending">$VAR[ListContentVar]</content>
 				</control>
 				<control type="group">
-					<description>Busy animation</description>
 					<visible>Container(8000).IsUpdating</visible>
 					<visible>![Container.Content(episodes) | Container.Content(videos)]</visible>
 					<include>SettingsFadeAnimation</include>
 					<left>236</left>
 					<top>552</top>
 					<control type="image">
+						<description>Busy animation</description>
 						<width>96</width>
 						<height>96</height>
-						<texture colordiffuse="$VAR[ThemeLabelColor]">android/spinner_48_inner_holo.png</texture>
+						<texture>android/spinner_48_inner_holo.png</texture>
 						<aspectratio>keep</aspectratio>
-						<animation effect="rotate" start="0" end="360" center="auto" time="2000" loop="true" condition="true">Conditional</animation>
+						<animation effect="rotate" start="0" end="360" center="auto" time="2000" loop="true" condition="true">conditional</animation>
 					</control>
 					<control type="image">
+						<description>Busy animation</description>
 						<width>96</width>
 						<height>96</height>
-						<texture colordiffuse="$VAR[ThemeLabelColor]">android/spinner_48_outer_holo.png</texture>
+						<texture>android/spinner_48_outer_holo.png</texture>
 						<aspectratio>keep</aspectratio>
-						<animation effect="rotate" start="360" end="0" center="auto" time="2000" loop="true" condition="true">Conditional</animation>
+						<animation effect="rotate" start="360" end="0" center="auto" time="2000" loop="true" condition="true">conditional</animation>
 					</control>
 				</control>
 			</control>
@@ -1198,6 +1378,15 @@
 				<left>100</left>
 				<top>-40</top>
 				<control type="image">
+					<description>background image</description>
+					<left>-32</left>
+					<top>1020</top>
+					<width>1204</width>
+					<height>904</height>
+					<texture border="40">panel_reflect.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
 					<left>-32</left>
 					<top>148</top>
 					<width>1204</width>
@@ -1217,6 +1406,12 @@
 					<pagecontrol>95060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -1243,6 +1438,7 @@
 							<height>105</height>
 							<font>font45caps_title</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<align>center</align>
 							<label>[B]$INFO[ListItem.Tracknumber][/B]</label>
 							<visible>Container.Content(songs)</visible>
@@ -1253,6 +1449,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Artist)">Conditional</animation>
 						</control>
@@ -1263,6 +1460,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Artist]</label>
 						</control>
 						<control type="label">
@@ -1272,6 +1470,7 @@
 							<font>font30</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label fallback="• • • •">$VAR[MusicListLabel4Var]</label>
 							<visible>!ListItem.IsParentFolder</visible>
 						</control>
@@ -1308,6 +1507,12 @@
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
 						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<width>1140</width>
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
@@ -1338,6 +1543,8 @@
 							<width>115</width>
 							<height>105</height>
 							<font>font45caps_title</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<align>center</align>
 							<label>[B]$INFO[ListItem.Tracknumber][/B]</label>
 							<visible>Container.Content(songs)</visible>
@@ -1347,6 +1554,8 @@
 							<width>985</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Artist)">Conditional</animation>
 						</control>
@@ -1356,6 +1565,8 @@
 							<width>810</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Artist]</label>
 						</control>
 						<control type="label">
@@ -1364,6 +1575,8 @@
 							<height>70</height>
 							<font>font30</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label fallback="• • • •">$VAR[MusicListLabel4Var]</label>
 							<visible>!ListItem.IsParentFolder</visible>
 						</control>
@@ -1380,6 +1593,12 @@
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(addons)">
 						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
@@ -1404,6 +1623,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -1414,6 +1634,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -1423,10 +1644,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="Container.Content(addons)">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -1457,6 +1685,8 @@
 							<width>905</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -1466,6 +1696,8 @@
 							<width>905</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -1474,10 +1706,18 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="![Container.Content(albums) | Container.Content(songs) | Container.Content(addons)]">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -1503,6 +1743,7 @@
 							<height>120</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -1512,10 +1753,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="120" width="1140" condition="![Container.Content(albums) | Container.Content(songs) | Container.Content(addons)]">
+					<focusedlayout height="120" width="1140" condition="![Container.Content(albums) | Container.Content(songs) |  Container.Content(addons)]">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -1546,6 +1794,8 @@
 							<width>1005</width>
 							<height>120</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -1554,23 +1804,26 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="95060">
-					<left>1142</left>
+					<left>1140</left>
 					<top>180</top>
-					<width>12</width>
+					<width>14</width>
 					<height>840</height>
 					<onup>95060</onup>
 					<ondown>95060</ondown>
 					<onleft>50</onleft>
 					<onright>9002</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">
@@ -1630,6 +1883,15 @@
 				<left>100</left>
 				<top>-40</top>
 				<control type="image">
+					<description>background image</description>
+					<left>-32</left>
+					<top>1020</top>
+					<width>1204</width>
+					<height>904</height>
+					<texture border="40">panel_reflect.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
 					<left>-32</left>
 					<top>148</top>
 					<width>1204</width>
@@ -1649,6 +1911,12 @@
 					<pagecontrol>95060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -1674,6 +1942,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -1684,6 +1953,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -1693,10 +1963,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -1727,6 +2004,8 @@
 							<width>985</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -1736,6 +2015,8 @@
 							<width>985</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -1744,24 +2025,27 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="95060">
-					<left>1142</left>
+					<left>1140</left>
 					<top>180</top>
-					<width>12</width>
+					<width>14</width>
 					<height>840</height>
 					<onup>95060</onup>
 					<ondown>95060</ondown>
 					<onleft>50</onleft>
 					<onright>SetProperty(MediaMenu,True,Home)</onright>
 					<onright>SetFocus(9050)</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">
@@ -1791,12 +2075,21 @@
 	<!-- Picture List -->
 	<include name="PictureList">
 		<control type="group">
-			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
+			<visible>Control.IsVisible(50)</visible>
 			<include>ViewAnimation</include>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
 				<control type="image">
+					<description>background image</description>
+					<left>-32</left>
+					<top>1020</top>
+					<width>1204</width>
+					<height>904</height>
+					<texture border="40">panel_reflect.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
 					<left>-32</left>
 					<top>148</top>
 					<width>1204</width>
@@ -1817,6 +2110,12 @@
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140" condition="Container.Content(addons)">
 						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
@@ -1841,6 +2140,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -1851,6 +2151,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -1860,10 +2161,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="Container.Content(addons)">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -1894,6 +2202,8 @@
 							<width>985</width>
 							<height>70</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -1903,6 +2213,8 @@
 							<width>985</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -1911,10 +2223,18 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="!Container.Content(addons)">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -1940,6 +2260,7 @@
 							<height>120</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -1949,10 +2270,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140" condition="!Container.Content(addons)">
+						<control type="image">
+							<top>60</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -1983,6 +2311,8 @@
 							<width>1005</width>
 							<height>120</height>
 							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -1991,23 +2321,26 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="95060">
-					<left>1142</left>
+					<left>1140</left>
 					<top>180</top>
-					<width>12</width>
+					<width>14</width>
 					<height>840</height>
 					<onup>95060</onup>
 					<ondown>95060</ondown>
 					<onleft>50</onleft>
 					<onright>9002</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">
@@ -2043,6 +2376,15 @@
 				<left>100</left>
 				<top>-40</top>
 				<control type="image">
+					<description>background image</description>
+					<left>-32</left>
+					<top>1020</top>
+					<width>1204</width>
+					<height>904</height>
+					<texture border="40">panel_reflect.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
 					<left>-32</left>
 					<top>148</top>
 					<width>1204</width>
@@ -2062,12 +2404,19 @@
 					<pagecontrol>95060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="60" width="1140" condition="!Container.Content(addons)">
+						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="label">
 							<left>30</left>
 							<width>895</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="image">
@@ -2079,7 +2428,6 @@
 							<texture>$VAR[UnFocusHDIndicator]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
-							<visible>Skin.HasSetting(noindicatorlist)</visible>
 						</control>
 						<control type="label">
 							<left>5</left>
@@ -2088,6 +2436,7 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="image">
@@ -2098,13 +2447,14 @@
 							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItem.Overlay]</texture>
 						</control>
 						<control type="group">
+							<description>Unwatched episodes</description>
 							<left>1076</left>
 							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>
 							<control type="image">
 								<top>-2</top>
 								<width>64</width>
 								<height>64</height>
-								<texture colordiffuse="$VAR[ThemeLabelColor]">overlays/list/OverlayUnWatched.png</texture>
+								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
@@ -2122,6 +2472,12 @@
 					</itemlayout>
 					<focusedlayout height="60" width="1140" condition="!Container.Content(addons)">
 						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<width>1140</width>
 							<height>60</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
@@ -2133,6 +2489,8 @@
 							<width>895</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="image">
@@ -2143,7 +2501,6 @@
 							<aspectratio>keep</aspectratio>
 							<texture>$VAR[UnFocusHDIndicator]</texture>
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
-							<visible>Skin.HasSetting(noindicatorlist)</visible>
 						</control>
 						<control type="label">
 							<left>5</left>
@@ -2151,6 +2508,8 @@
 							<height>60</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="image">
@@ -2158,16 +2517,17 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]" fallback="overlays/list/">$VAR[ListItem.Overlay]</texture>
+							<texture  colordiffuse="$VAR[ThemeLabelColor]" fallback="overlays/list/">$VAR[ListItem.Overlay]</texture>
 						</control>
 						<control type="group">
+							<description>Unwatched episodes</description>
 							<left>1076</left>
 							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>
 							<control type="image">
 								<top>-2</top>
 								<width>64</width>
 								<height>64</height>
-								<texture colordiffuse="$VAR[ThemeLabelColor]">overlays/list/OverlayUnWatched.png</texture>
+								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
@@ -2183,12 +2543,19 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="60" width="1140" condition="Container.Content(addons)">
+						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="label">
 							<left>30</left>
 							<width>1080</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -2198,10 +2565,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60" width="1140" condition="Container.Content(addons)">
+						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>60</height>
@@ -2214,6 +2588,8 @@
 							<width>1080</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -2222,24 +2598,27 @@
 							<height>60</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="95060">
-					<left>1142</left>
+					<left>1140</left>
 					<top>180</top>
-					<width>12</width>
+					<width>14</width>
 					<height>840</height>
 					<onup>95060</onup>
 					<ondown>95060</ondown>
 					<onleft>50</onleft>
 					<onright>SetProperty(MediaMenu,True,Home)</onright>
 					<onright>SetFocus(9050)</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">
@@ -2275,6 +2654,15 @@
 				<left>100</left>
 				<top>-40</top>
 				<control type="image">
+					<description>background image</description>
+					<left>-32</left>
+					<top>1020</top>
+					<width>1204</width>
+					<height>904</height>
+					<texture border="40">panel_reflect.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
 					<left>-32</left>
 					<top>148</top>
 					<width>1204</width>
@@ -2295,6 +2683,12 @@
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="60" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
 						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
+						<control type="image">
 							<left>5</left>
 							<top>5</top>
 							<width>180</width>
@@ -2310,6 +2704,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -2319,10 +2714,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
+						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>60</height>
@@ -2344,6 +2746,8 @@
 							<width>900</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -2352,16 +2756,25 @@
 							<height>60</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 					<itemlayout height="60" width="1140" condition="![Container.Content(albums) | Container.Content(songs)]">
+						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="label">
 							<left>30</left>
 							<width>1080</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -2371,10 +2784,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60" width="1140" condition="![Container.Content(albums) | Container.Content(songs)]">
+						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>60</height>
@@ -2387,6 +2807,8 @@
 							<width>1080</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -2395,24 +2817,27 @@
 							<height>60</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="95060">
-					<left>1142</left>
+					<left>1140</left>
 					<top>180</top>
-					<width>12</width>
+					<width>14</width>
 					<height>840</height>
 					<onup>95060</onup>
 					<ondown>95060</ondown>
 					<onleft>50</onleft>
 					<onright>SetProperty(MediaMenu,True,Home)</onright>
 					<onright>SetFocus(9050)</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">
@@ -2448,6 +2873,15 @@
 				<left>100</left>
 				<top>-40</top>
 				<control type="image">
+					<description>background image</description>
+					<left>-32</left>
+					<top>1020</top>
+					<width>1204</width>
+					<height>904</height>
+					<texture border="40">panel_reflect.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
 					<left>-32</left>
 					<top>148</top>
 					<width>1204</width>
@@ -2467,12 +2901,19 @@
 					<pagecontrol>95060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="60" width="1140">
+						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="label">
 							<left>30</left>
 							<width>1080</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -2482,10 +2923,17 @@
 							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60" width="1140">
+						<control type="image">
+							<top>2</top>
+							<width>1140</width>
+							<height>60</height>
+							<texture border="1">separator2.png</texture>
+						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>60</height>
@@ -2498,6 +2946,8 @@
 							<width>1080</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -2506,24 +2956,27 @@
 							<height>60</height>
 							<font>font15</font>
 							<align>right</align>
+							<textcolor>white</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="95060">
-					<left>1142</left>
+					<left>1140</left>
 					<top>180</top>
-					<width>12</width>
+					<width>14</width>
 					<height>840</height>
 					<onup>95060</onup>
 					<ondown>95060</ondown>
 					<onleft>50</onleft>
 					<onright>SetProperty(MediaMenu,True,Home)</onright>
 					<onright>SetFocus(9050)</onright>
-					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					<texturesliderbackground />
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">

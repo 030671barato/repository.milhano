@@ -7,11 +7,11 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
-			<top>64</top>
+			<top>59</top>
 			<include>WindowOpenCloseAnimation</include>
-			<include>SystemPanel</include>
+			<include>SystemLeftPanel</include>
 			<control type="list" id="9000">
-				<left>81</left>
+				<left>82</left>
 				<top>32</top>
 				<width>356</width>
 				<height>810</height>
@@ -36,23 +36,31 @@
 				<ondown>9000</ondown>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime tween="quadratic">300</scrolltime>
-				<itemlayout height="81" width="356">
+				<itemlayout height="90" width="356">
+					<control type="image">
+						<top>30</top>
+						<width>356</width>
+						<height>60</height>
+						<texture border="1">separator2.png</texture>
+					</control>
 					<control type="group">
 						<visible>!String.IsEqual(System.Date(ddd),ListItem.Property(day))</visible>
 						<control type="label">
 							<width>356</width>
-							<height>81</height>
+							<height>90</height>
 							<font>font15_bold</font>
 							<textoffsetx>20</textoffsetx>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
 							<width>356</width>
-							<height>81</height>
+							<height>90</height>
 							<font>font15</font>
 							<textoffsetx>20</textoffsetx>
 							<textcolor>grey2</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
@@ -61,27 +69,35 @@
 						<visible>String.IsEqual(System.Date(ddd),ListItem.Property(day))</visible>
 						<control type="label">
 							<width>356</width>
-							<height>81</height>
+							<height>90</height>
 							<font>font15_bold</font>
 							<textoffsetx>20</textoffsetx>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
 							<width>356</width>
-							<height>81</height>
+							<height>90</height>
 							<font>font15</font>
 							<textoffsetx>20</textoffsetx>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="81" width="356">
+				<focusedlayout height="90" width="356">
+					<control type="image">
+						<top>30</top>
+						<width>356</width>
+						<height>60</height>
+						<texture border="1">separator2.png</texture>
+					</control>
 					<control type="image">
 						<width>356</width>
-						<height>81</height>
+						<height>90</height>
 						<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 						<visible>Control.HasFocus(9000)</visible>
 						<include>VisibleFadeAnimation</include>
@@ -89,16 +105,18 @@
 					<control type="group">
 						<control type="label">
 							<width>356</width>
-							<height>81</height>
+							<height>90</height>
 							<font>font15_bold</font>
 							<textoffsetx>20</textoffsetx>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
 							<width>356</width>
-							<height>81</height>
+							<height>90</height>
 							<font>font15</font>
 							<textoffsetx>20</textoffsetx>
+							<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
@@ -183,14 +201,23 @@
 				<onup>61</onup>
 				<showonepage>false</showonepage>
 				<texturesliderbackground />
-				<texturesliderbar colordiffuse="80FFFFFF" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+				<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 				<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<left>60</left>
+				<top>875</top>
+				<width>400</width>
+				<height>130</height>
+				<texture>aeon-nox-logo.png</texture>
+			</control>
+			<include>SystemRightPanel</include>
 			<control type="group" id="9001">
 				<control type="scrollbar" id="60">
-					<left>437</left>
+					<left>522</left>
 					<top>18</top>
-					<width>1401</width>
+					<width>1316</width>
 					<height>12</height>
 					<onup>9001</onup>
 					<ondown condition="Container(9000).HasFocus(1)">200</ondown>
@@ -327,6 +354,7 @@
 				<texture border="40">mediamenu_back.png</texture>
 			</control>
 			<control type="button" id="8999">
+				<description>Close Window button</description>
 				<left>358</left>
 				<top>-11</top>
 				<width>64</width>
@@ -343,6 +371,7 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="image">
+				<description>LOGO</description>
 				<top>-15</top>
 				<width>400</width>
 				<height>130</height>
@@ -362,6 +391,13 @@
 					<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
 					<textcolor>$VAR[ThemeLabelColor]</textcolor>
 				</control>
+				<!-- <control type="button" id="20002">
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[19190]</label>
+					<onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
+					<onclick>$VAR[FallbackBackgroundOnClickVar]</onclick>
+					<onclick>ActivateWindow(1122)</onclick>
+				</control> -->
 				<control type="button" id="8">
 					<description>Settings</description>
 					<textwidth>352</textwidth>
