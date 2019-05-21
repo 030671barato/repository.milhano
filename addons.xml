@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.PLsportowo" name="Sportowa TV" version="1.8.3" provider-name="mbebe">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.requests" />
+		<import addon="script.module.parsedom" version="2.5.2"/>
+		<import addon="script.module.inputstreamhelper" version="0.3.3"/>
+		<import addon="script.module.resolveurl" version="5.0.00"/>
+        <import addon="script.module.streamlink.base" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="maintv.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<description>Wydarzenia sportowe</description>
+		<disclaimer>https://github.com/mbebe/blomqvist</disclaimer>
+		<summary>Relacje Live</summary>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<website></website>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.kuala"
+       name="koala"
+       version="0.01"
+       provider-name="joseveiga">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" /> 
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Add-On kuala </summary>
+     <description>kuala ....best</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.program.milhanothemes" name="Milhano Themes" version="0.1" provider-name="Milhano Themes">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1886,37 +1944,6 @@ V3.0.0.3
  
  </extension>
 
-</addon>
-
-<addon id="plugin.video.akuala"
-       name="akuala"
-       version="10.0"
-       provider-name="akuala">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" /> 
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Add-On akuala </summary>
-    <description lang="en">Add-On teste akuala</description>
-    <platform>all</platform>
-  </extension>
 </addon>
 
 <addon id="plugin.program.AresMilhano18" name=" [B][COLOR orange]Ares Milhano Wizard[/COLOR][/B]" version="1.0" provider-name="[B][COLOR red]Milhano[/COLOR][/B]">
